@@ -61,4 +61,8 @@ Il est nécessaire à la réalisation de plusieurs activités en classe que votr
 Si votre ordinateur n'en dispose pas, vous devrez acheter un adaptateur compatible avec votre système. Cet adaptateur sera nécessaire à partir de la semaine prochaine et il est de votre responsabilité de toujours l'ammener en classe. 
 
 **Nous n'avons pas d'adaptateur à vous fournir.**
+
+<img src="img/adaptateur.png" width="300" />
+
+
 ![250](img/adaptateur.png)
