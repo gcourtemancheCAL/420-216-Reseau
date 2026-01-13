@@ -4,22 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "7113363107664440",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "a512f813aaa549df",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          }
-        ]
-      },
-      {
         "id": "02e97b4e485923ba",
         "type": "tabs",
         "children": [
@@ -27,10 +11,14 @@
             "id": "51d1858062569edf",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "presentation-du-cours/presentation-cours.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "presentation-cours"
             }
           }
         ]
@@ -106,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "presentation-du-cours/presentation-cours.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for presentation-cours"
             }
           },
           {
@@ -124,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "presentation-du-cours/presentation-cours.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from presentation-cours"
             }
           },
           {
@@ -166,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "presentation-du-cours/presentation-cours.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of presentation-cours"
             }
           }
         ]
@@ -192,8 +183,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "a5f165504f078308",
+  "active": "51d1858062569edf",
   "lastOpenFiles": [
+    "presentation-du-cours/plan-de-cours.pdf",
+    "presentation-du-cours/presentation-cours.md",
+    "presentation-du-cours/420-216-AL- H26-GCourtemanche.pdf",
     "presentation-du-cours",
     "Welcome.md",
     "desktop.ini"
