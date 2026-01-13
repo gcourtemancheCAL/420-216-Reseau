@@ -1,6 +1,5 @@
 # Introduction aux réseaux
 ## Le réseau
-<span id="sect-reseau"/> 
 **Définition** : un réseau est un ensemble de système interconnecté afin de permettre l'échange et le partage de resources et de services.
 
 **Exemples de resources :** 

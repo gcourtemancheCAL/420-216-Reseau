@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cours-01-introduction-reseau/cours01-3-le-reseau-de-la-classe.md",
+                "file": "cours-01-introduction-reseau/cours01-2-intro-reseau.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "cours01-3-le-reseau-de-la-classe"
+              "title": "cours01-2-intro-reseau"
             }
           }
         ],
@@ -214,8 +214,8 @@
   },
   "active": "b391df984bc1c72f",
   "lastOpenFiles": [
-    "cours-01-introduction-reseau/cours01-2-intro-reseau.md",
     "cours-01-introduction-reseau/cours01-3-le-reseau-de-la-classe.md",
+    "cours-01-introduction-reseau/cours01-2-intro-reseau.md",
     "cours-01-introduction-reseau/cours01-1-presentation.md",
     "cours-01-introduction-reseau/img/Pasted image 20260113172223.png",
     "cours-01-introduction-reseau/img/Pasted image 20260113164956.png",
