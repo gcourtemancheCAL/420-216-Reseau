@@ -1,5 +1,8 @@
 # Présentation de l'enseignant
 
+##### Études
+- Technique en informatique de gestion, Cegép André-Laurendeau
+- B.Sc.A  en informatique et génie logiciel, UQAM 
 ##### Expérience professionnelle
 - 10+ années d'expérience en entreprise
 	- Développement du firmware et d'applications pour des Media Gateway (équipement utilisé dans le contexte de la téléphonie IP)
