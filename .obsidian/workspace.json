@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cours-01-introduction-reseau/cours01-1-presentation.md",
+                "file": "cours-01-introduction-reseau/cours01-2-intro-reseau.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "cours01-1-presentation"
+              "title": "cours01-2-intro-reseau"
             }
           }
         ],
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cours-01-introduction-reseau/cours01-1-presentation.md",
+                "file": "cours-01-introduction-reseau/cours01-2-intro-reseau.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for cours01-1-presentation"
+              "title": "Backlinks for cours01-2-intro-reseau"
             }
           },
           {
@@ -128,12 +128,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cours-01-introduction-reseau/cours01-1-presentation.md",
+                "file": "cours-01-introduction-reseau/cours01-2-intro-reseau.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from cours01-1-presentation"
+              "title": "Outgoing links from cours01-2-intro-reseau"
             }
           },
           {
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cours-01-introduction-reseau/cours01-1-presentation.md",
+                "file": "cours-01-introduction-reseau/cours01-2-intro-reseau.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of cours01-1-presentation"
+              "title": "Outline of cours01-2-intro-reseau"
             }
           }
         ]
@@ -200,11 +200,21 @@
   },
   "active": "71774b53b3a3d008",
   "lastOpenFiles": [
+    "cours-01-introduction-reseau/img/Pasted image 20260113172223.png",
+    "cours-01-introduction-reseau/img/Pasted image 20260113164956.png",
     "cours-01-introduction-reseau/cours01-2-intro-reseau.md",
-    "cours-01-introduction-reseau/plan-de-cours.pdf",
-    "cours-01-introduction-reseau/img/adaptateur.png",
+    "Pasted image 20260113164931.png",
+    "cours-01-introduction-reseau/img/Pasted image 20260113164435.png",
+    "cours-01-introduction-reseau/img/Pasted image 20260113164128.png",
+    "cours-01-introduction-reseau/img/Pasted image 20260113161410.png",
+    "cours-01-introduction-reseau/img/Pasted image 20260113161313.png",
+    "cours-01-introduction-reseau/img/Pasted image 20260113161210.png",
+    "cours-01-introduction-reseau/img/Pasted image 20260113161030.png",
+    "Pasted image 20260113155255.png",
+    "cours-01-introduction-reseau/img/Pasted image 20260113155323.png",
     "cours-01-introduction-reseau/cours01-1-presentation.md",
-    "cours-01-introduction-reseau/img/Pasted image 20260113132730.png",
+    "Types de réseaux.md",
+    "cours-01-introduction-reseau/plan-de-cours.pdf",
     "cours-01-introduction-reseau/img",
     "presentation-du-cours/420-216-AL- H26-GCourtemanche.pdf",
     "cours-01-introduction-reseau",

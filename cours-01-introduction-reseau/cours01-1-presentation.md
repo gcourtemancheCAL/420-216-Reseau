@@ -64,3 +64,8 @@ Si votre ordinateur n'en dispose pas, vous devrez acheter un adaptateur compatib
 
 <img src="img/adaptateur.png" width="300" />
 
+
+
+
+
+[Suite...](cours01-2-intro-reseau)
