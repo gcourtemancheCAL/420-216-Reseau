@@ -40,9 +40,13 @@ Difficile d'ajouter des systèmes dans les contextes où la connexion est filair
 
 #### Topologie d'un réseau résidentiel typique
 <img src="img/Pasted image 20260113153926.png" width="600" />
+
 #### Topologie plus complexe
+
 ![[Pasted image 20260113155323.png]]
+
 #### Vocabulaire
+
 **Noeud** : Un appareil dans notre topologie qui peut créer ou transmettre de l'information. Peut être un appareil terminal (pc, tablette, cellulaire, serveur) ou bien un appareil intermédiaire (commutateur, routeur, point d'accès sans-fil, modem, concentrateur )
 
 **Lien/connexion** :  Médium de communication reliant deux noeuds ensemble et leur permettant de communiquer entre eux. Il doit y avoir un lien entre deux noeuds pour qu'ils puissent communiquer entre eux. Le lien peut représenter une connexion câblée physique (câble ethernet, câble coaxial, fibre optique, connexion série, ...) ou bien, aussi, une connexion sans-fil (WiFi, bluetooth, zigbee, ...)
