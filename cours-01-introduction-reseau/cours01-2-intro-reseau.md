@@ -18,6 +18,7 @@
 #### Topologie en bus
 
 <img src="img/Pasted image 20260113150300.png" width="300" />
+
 **Définition** : Topologie simple dans tous les systèmes envoient les messages sur un bus commun. Tout le monde peut voir ce qui passe sur le bus et est responsable de seulement gérer ce qui le concerne.
 
 De nos jours : surtout utilisé dans les contextes hardware.
@@ -31,6 +32,7 @@ Difficile d'ajouter des systèmes dans les contextes où la connexion est filair
 
 #### Topologie en étoile
 <img src="img/Pasted image 20260113153104.png" width="300" />
+
 **Définition** : Topologie dans laquelle les systèmes sont connectés à un appareil central qui est responsable d'acheminer les communications à leurs destinataires.
 
 ### Schématisation d'un réseau
