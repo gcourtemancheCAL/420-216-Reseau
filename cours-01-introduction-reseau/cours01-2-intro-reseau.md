@@ -87,14 +87,19 @@ L'internet est souvent donné en exemple du principal WAN.
 
 #### Concentrateur
 <img src="img/Pasted image 20260113164128.png" width="300" />
+
 **Obsolète**
 Équipement permettant de concentrer la communication de plusieurs appareils différents sur une même ligne.
+
 #### Commutateur
 <img src="img/Pasted image 20260113164435.png" width="300" />
+
 Permet d'établir une connexion directe entre différents appareils. Contrairement au concentrateur, la ligne n'est pas partagée.
 
 <img src="img/Pasted image 20260113153104.png" width="300" />
+
 #### Routeur
+
 <img src="img/Pasted image 20260113164956.png" width="600" />
 
 Achemine les messages à travers les différents sous-réseaux ou réseaux. Un routeur va servir de passerelle vers internet.
