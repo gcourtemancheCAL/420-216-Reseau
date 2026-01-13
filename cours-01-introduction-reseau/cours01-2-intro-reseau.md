@@ -43,7 +43,7 @@ Difficile d'ajouter des systèmes dans les contextes où la connexion est filair
 
 #### Topologie plus complexe
 
-![[Pasted image 20260113155323.png]]
+<img src="img/Pasted image 20260113155323.png" width="800" />
 
 #### Vocabulaire
 
