@@ -1,2 +1,3 @@
 # Présentation du cours
-[Plan de cours](plan-de-cours.pdf)
+
+![Plan de cours](plan-de-cours.pdf)
