@@ -13,6 +13,7 @@
 ### Types de topologies
 #### Topologie point à point
 <img src="img/Pasted image 20260113145823.png" width="300" />
+
 **Définition** : Topologie simple dans laquelle deux systèmes sont directement connectés l'un à l'autre.
 
 #### Topologie en bus
