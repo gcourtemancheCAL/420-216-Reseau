@@ -56,7 +56,7 @@ Compte tenu des contraintes logistiques importantes reliées à la réalisation 
 ## Important! Prise Ethernet
 Il est nécessaire à la réalisation de plusieurs activités en classe que votre ordinateur portable dispose d'un port Ethernet.
 
-![[img/Pasted image 20260113132730.png]]
+<img src="img/Pasted image 20260113132730.png" width="300" />
 
 Si votre ordinateur n'en dispose pas, vous devrez acheter un adaptateur compatible avec votre système. Cet adaptateur sera nécessaire à partir de la semaine prochaine et il est de votre responsabilité de toujours l'ammener en classe. 
 
@@ -64,5 +64,3 @@ Si votre ordinateur n'en dispose pas, vous devrez acheter un adaptateur compatib
 
 <img src="img/adaptateur.png" width="300" />
 
-
-![250](img/adaptateur.png)
