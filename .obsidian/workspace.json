@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cours-01-introduction-reseau/cours01-5-le-reseau-de-la-classe.md",
+                "file": "cours-02-adressage-client-serveur/cours02-01-pile-osi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "cours01-5-le-reseau-de-la-classe"
+              "title": "cours02-01-pile-osi"
             }
           }
         ],
@@ -214,22 +214,26 @@
   },
   "active": "b391df984bc1c72f",
   "lastOpenFiles": [
+    "cours-02-adressage-client-serveur/cours02-02-transmission-reseau.md",
+    "cours-02-adressage-client-serveur/img/Pasted image 20260114135717.png",
+    "cours-02-adressage-client-serveur/img/Pasted image 20260114135512.png",
+    "cours-02-adressage-client-serveur/img/Pasted image 20260114135322.png",
+    "cours-02-adressage-client-serveur/img/Pasted image 20260114134811.png",
+    "cours-02-adressage-client-serveur/img/Pasted image 20260114134603.png",
+    "cours-02-adressage-client-serveur/cours02-01-pile-osi.md",
+    "cours-02-adressage-client-serveur/img/Pasted image 20260114133619.png",
+    "cours-02-adressage-client-serveur/img/Pasted image 20260114132432.png",
+    "cours-02-adressage-client-serveur/img/Pasted image 20260114105322.png",
+    "cours-02-adressage-client-serveur/img/Pasted image 20260114105140.png",
     "cours-01-introduction-reseau/cours01-4-equipement.md",
+    "cours-02-adressage-client-serveur/img/Pasted image 20260114104806.png",
+    "cours-01-introduction-reseau/cours01-5-le-reseau-de-la-classe.md",
+    "cours-02-adressage-client-serveur/img",
+    "cours-02-adressage-client-serveur",
     "cours-01-introduction-reseau/cours01-3-types-de-reseaux.md",
     "cours-01-introduction-reseau/cours01-2-intro-reseau.md",
     "cours-01-introduction-reseau/cours01-1-presentation.md",
-    "cours-01-introduction-reseau/cours01-5-le-reseau-de-la-classe.md",
-    "cours-01-introduction-reseau/img/Pasted image 20260114101638.png",
-    "cours-01-introduction-reseau/img/Pasted image 20260114101103.png",
-    "cours-01-introduction-reseau/img/Pasted image 20260114095411.png",
     "cours-01-introduction-reseau/plan-de-cours.pdf",
-    "cours-01-introduction-reseau/img/Pasted image 20260113172223.png",
-    "cours-01-introduction-reseau/img/Pasted image 20260113164956.png",
-    "Pasted image 20260113164931.png",
-    "cours-01-introduction-reseau/img/Pasted image 20260113164435.png",
-    "cours-01-introduction-reseau/img/Pasted image 20260113164128.png",
-    "cours-01-introduction-reseau/img/Pasted image 20260113161410.png",
-    "cours-01-introduction-reseau/img/Pasted image 20260113161313.png",
     "Types de réseaux.md",
     "cours-01-introduction-reseau/img",
     "presentation-du-cours/420-216-AL- H26-GCourtemanche.pdf",
