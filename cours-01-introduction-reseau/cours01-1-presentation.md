@@ -66,6 +66,6 @@ Si votre ordinateur n'en dispose pas, vous devrez acheter un adaptateur compatib
 
 
 
+<hr>
 
-
-[Suite...](cours01-2-intro-reseau)
+[Suivant](cours01-2-intro-reseau)

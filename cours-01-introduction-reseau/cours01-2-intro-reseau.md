@@ -36,6 +36,12 @@ Difficile d'ajouter des systèmes dans les contextes où la connexion est filair
 
 **Définition** : Topologie dans laquelle les systèmes sont connectés à un appareil central qui est responsable d'acheminer les communications à leurs destinataires.
 
+#### Topologie en arbre
+
+<img src="img/Pasted image 20260114095411.png" width="600" />
+
+**Définition** : Topologie hiérarchique qui se compose de plusieurs topologies en étoiles reliées entres elles.
+
 ### Schématisation d'un réseau
 
 #### Topologie d'un réseau résidentiel typique
@@ -51,66 +57,6 @@ Difficile d'ajouter des systèmes dans les contextes où la connexion est filair
 
 **Lien/connexion** :  Médium de communication reliant deux noeuds ensemble et leur permettant de communiquer entre eux. Il doit y avoir un lien entre deux noeuds pour qu'ils puissent communiquer entre eux. Le lien peut représenter une connexion câblée physique (câble ethernet, câble coaxial, fibre optique, connexion série, ...) ou bien, aussi, une connexion sans-fil (WiFi, bluetooth, zigbee, ...)
 
-## Types de réseaux
-#### PAN
-**Personnal area network**
+<hr>
 
-Réseau de très courte portée. E.g. Bluetooth.
-
-#### LAN
-**Local area network**
-
-Réseau restreint à un domicile, un bâtiment, ou une entreprise. Le LAN est restreint dans la surface géographique qu'il occupe. Les appareils vont être connectés entre eux par le biais d'équippement comme des commutateurs ou des routeurs.
-
-#### CAN
-**Campus area network**
-
-Un réseau contrôlé par une même organisation composé de plusieurs LAN occupant des bâtiments différents dans un espace géographique relativement restreint.
-
-Réfère généralement au type de réseau que l'on peut voir dans certaines universités qui ont un campus distribué à travers la ville ou dans certaines entreprises qui peuvent avoir des bureaux dans plusieurs bâtiments différents.
-#### WAN
-**Wide area network**
-
-Réseau occupant un large espace géographique.
-
-L'internet est souvent donné en exemple du principal WAN.
-
-## Équipement d'un réseau
-### Câbles et connecteurs
-
-#### Câble ethernet avec connecteur RJ45
-<img src="img/Pasted image 20260113161030.png" width="300" />
-
-#### Câble coaxial
-<img src="img/Pasted image 20260113161210.png" width="300" />
-
-
-#### Fibre optique
-<img src="img/Pasted image 20260113161313.png" width="300" />
-
-#### Câble série
-<img src="img/Pasted image 20260113161410.png" width="300" />
-
-
-### Équipements intermédiaires
-
-#### Concentrateur
-<img src="img/Pasted image 20260113164128.png" width="300" />
-
-**Obsolète**
-Équipement permettant de concentrer la communication de plusieurs appareils différents sur une même ligne.
-
-#### Commutateur
-<img src="img/Pasted image 20260113164435.png" width="300" />
-
-Permet d'établir une connexion directe entre différents appareils. Contrairement au concentrateur, la ligne n'est pas partagée.
-
-<img src="img/Pasted image 20260113153104.png" width="300" />
-
-#### Routeur
-
-<img src="img/Pasted image 20260113164956.png" width="600" />
-
-Achemine les messages à travers les différents sous-réseaux ou réseaux. Un routeur va servir de passerelle vers internet.
-
-<img src="img/Pasted image 20260113172223.png" width="600" />
+[Précédent](cours01-1-presentation) - [Suivant](cours01-3-types-de-reseaux)
