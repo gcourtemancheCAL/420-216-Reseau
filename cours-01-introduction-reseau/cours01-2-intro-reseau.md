@@ -59,4 +59,4 @@ Difficile d'ajouter des systèmes dans les contextes où la connexion est filair
 
 <hr>
 
-[Précédent](cours01-1-presentation) - [Suivant](cours01-3-types-de-reseaux)
+[Précédent](cours01-1-presentation.md) - [Suivant](cours01-3-types-de-reseaux.md)

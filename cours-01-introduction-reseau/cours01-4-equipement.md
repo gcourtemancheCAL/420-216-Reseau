@@ -51,4 +51,4 @@ Appareil responsable de convertir le signal analog du câble coaxial en signal d
 
 <hr>
 
-[Précédent](cours01-3-types-de-reseaux) - [Suivant](cours01-5-le-reseau-de-la-classe)
+[Précédent](cours01-3-types-de-reseaux.md) - [Suivant](cours01-5-le-reseau-de-la-classe.md)

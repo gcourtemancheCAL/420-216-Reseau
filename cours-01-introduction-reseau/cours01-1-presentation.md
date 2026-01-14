@@ -68,4 +68,4 @@ Si votre ordinateur n'en dispose pas, vous devrez acheter un adaptateur compatib
 
 <hr>
 
-[Suivant](cours01-2-intro-reseau)
+[Suivant](cours01-2-intro-reseau.md)

@@ -25,5 +25,5 @@ L'internet est souvent donné en exemple du principal WAN.
 
 <hr>
 
-[Précédent](cours01-2-intro-reseau) - [Suivant](cours01-4-equipement)
+[Précédent](cours01-2-intro-reseau.md) - [Suivant](cours01-4-equipement.md)
 

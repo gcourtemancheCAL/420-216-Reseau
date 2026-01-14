@@ -4,4 +4,4 @@
 
 <hr>
 
-[Précédent](cours01-4-equipement)
+[Précédent](cours01-4-equipement.md)
