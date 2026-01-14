@@ -58,3 +58,6 @@ _Client_ veut envoyer un message à _ServeurWeb_
 22. À l'aide du numéro de port de destination, il sait vers quel processus acheminer les données. (couche4)
 23. Le processus reçoit les données et les gère. (couche 5-6-7).
 
+<hr>
+
+[Précédent](cours02-01-pile-osi.md) - [Suivant](cours02-03-client-serveur.md)

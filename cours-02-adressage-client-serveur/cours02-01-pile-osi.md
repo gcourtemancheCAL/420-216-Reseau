@@ -94,3 +94,7 @@ Cette couche définie les standards physiques permettant la communication : les 
 8. **Exploitation du contenu (couches 5–6–7)**  
     Bob ouvre l’enveloppe, lit le rapport et l’utilise selon les règles d’affaires d’OrgTech.  
 
+
+<hr>
+
+[Suivant](cours02-02-transmission-reseau.md)
