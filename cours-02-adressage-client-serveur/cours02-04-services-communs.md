@@ -140,7 +140,11 @@ Permet à un client d'aller chercher les courriels qui lui sont destinés sur un
 
 Un serveur DNS va retourner l'adresse IP assignée à un nom de domaine particulier.
 
-**Nom de domaine** : nom enregistré auprès d’une autorité qui identifie correspond à une adresse IP. Un nom de domaine est forme plus simple et facile à mémoriser pour identifier un hôte.
+**Nom de domaine** : Identifiant hiéarchique textuel identifiant un système via sa correspondance à une adresse IP. 
+
+Exemples : 
+1. www.google.com
+2. www.youtube.com
 
 **Exemple de serveur DNS ** :
 - bind9
