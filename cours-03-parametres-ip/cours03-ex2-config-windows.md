@@ -1,34 +1,164 @@
 # Atelier : Configuration IP sur Windows
 
-#### Préalables : 
-- Ces exercices sont à réaliser en classe, en équipe.
-- Deux membres de l'équipe devront chacun se connecter à un routeur.
-- Les configurations vont être mises en place sur machine virtuelle Windows. Si vous n'avez pas de machines virtuelles de prêtes, effectuez les configurations directement sur votre système. **Vous allez, cependant, être responsable de l'état de votre système après coup.**
+## Préalables
+- Activité à réaliser en classe, en équipe de deux.
+- Chaque membre se connecte physiquement (câble Ethernet) à un routeur dédié.
+- Permissions administrateur requises pour certaines commandes.
+- À la fin, remettez vos paramètres IP à leur état initial.
 
-#### Préparation de la machine virtuelle
+---
 
-Afin que les exercices ci-dessous puissent fonctionner, vous devez vous assurer que la machine virtuelle est dans le même réseau IP que votre ordinateur. Assurez-vous que son adaptateur réseau soit en mode "pont" avec votre adaptateur Ethernet.
+## Étape 1 — Connexion des machines au réseau
 
-<img src="img/Pasted image 20260119093431.png" width="600" />
-
-#### Étape 1 - Connexion des machines au réseau: 
-
-**Objectifs de l'étape** : 
-- Connecter les équipements physiques au routeur
-- Valider la connexion IP
+**Objectifs**
+- Connecter les équipements au routeur
+- Obtenir une configuration IP via DHCP
 - Valider la connectivité entre les systèmes
 
-**Procédure à suivre** : 
-- Connectez-vous, par câble, au routeur mis à votre disposition.
-- **Validations** : 
-	- En regardant les indicateurs lumineux, validez que la connexion est bien établie.
-	- Validez les paramètres IP qui vous ont été assignés par DHCP. Votre adresse devrait être entre le `192.168.100.10` et le `192.168.100.20`.
-- Changez le profile de réseau pour "Réseau privé"
+**Procédure**
+- Branchez le câble réseau entre votre PC et le routeur.
+- Vérifiez les DEL sur le port du routeur et de la carte réseau.
+- Assurez-vous que le profil réseau Windows est « Réseau privé ».
 
 <img src="img/Pasted image 20260119093755.png" width="600" />
 
-- **Validation** :
-	- Une fois cette étape réalisée sur les deux ordinateurs physiques, ils devraient être en mesure de se rejoindre avec la commande ping.
+**Commandes utiles (Windows)**
+```powershell
+# Voir le profil réseau et l’interface active (powershell)
+Get-NetConnectionProfile
+
+# Voir la configuration IP attribuée (DHCP)
+ipconfig /all
+```
+
+**Attendus**
+- Votre IPv4 doit être dans la plage 192.168.100.10–192.168.100.20.
+- La passerelle par défaut doit être 192.168.100.1.
+
+**Validation de connectivité**
+```powershell
+# Tester la connectivité vers le routeur
+ping 192.168.100.1
+
+# Tester la connectivité vers l'autre système
+ping 192.168.100.X
+
+# Tester la connectivité vers un nom de domaine (résolution DNS + accès internet)
+ping www.google.com
+
+# Alternative avec plus de détails (powershell)
+Test-NetConnection 192.168.100.1
+```
+
+---
+
+## Étape 2 — Manipulation du DHCP
+
+**Objectifs**
+- Observer et manipuler la configuration obtenue par DHCP
+- Comprendre le bail DHCP (obtention/expiration)
+
+**Identification des paramètres (adresse, passerelle, DNS, bail)**
+```powershell
+# Détails complets, incluant DHCP Enabled, Lease Obtained, Lease Expires
+ipconfig /all
+```
+
+**Libérer et renouveler l’adresse DHCP**
+```powershell
+# Libère l’adresse IP DHCP (coupe momentanément la connectivité)
+ipconfig /release
+
+# Demande une nouvelle adresse au serveur DHCP
+ipconfig /renew
+```
+
+**Questions**
+- Quels sont « Lease Obtained » et « Lease Expires » avant/après le renouvellement?
+- Les paramètres (IPv4, passerelle, DNS) ont-ils changé? Expliquez.
+
+**Validation**
+- Les deux systèmes doivent pouvoir se joindre par `ping` après le renouvellement.
+
+---
+
+## Étape 3 — Configuration IP statique
+
+**Objectifs**
+- Configurer une interface en IPv4 statique
+- Valider la nouvelle configuration et ses impacts
+
+**Procédure**
+En utilisant l'une des méthodes de configuration IP vues en classe, configurez statiquement votre interface ethernet connecté au réseau avec les paramètres suivant : 
+- IPv4: 192.168.100.50
+- Masque: 255.255.255.0 (/24)
+- Passerelle: 192.168.100.1
+- DNS: 192.168.100.1
+
+**Validation**
+```powershell
+ipconfig
+ping 192.168.100.1
+```
+
+**Question**
+- Que se passe-t-il si vous lancez `ipconfig /release` et `ipconfig /renew` après avoir mis l’IP statique? Pourquoi?
+
+---
+
+## Étape 4 — Conflit d’adresse IP
+
+**Objectifs**
+- Observer une erreur classique de configuration: duplication d’IP
+
+**Procédure**
+- Mettez les deux machines sur la même IP statique: 192.168.100.50/24, passerelle 192.168.100.1, DNS 192.168.100.1.
+- Testez la connectivité vers le routeur simultanément sur les deux postes.
+
+**Observation & outils**
+```powershell
+# Pings consécutifs (Windows)
+ping 192.168.100.1 -t
+```
+
+**Question**
+- Que se passe-t-il? Proposez une hypothèse.
+
+---
+
+## Étape 5 — Réinitialisation de la configuration IP
+
+**Objectif**
+- Revenir à une configuration DHCP propre (adresse et DNS automatiques)
+
+**Procédure**
+En utilisant l'une des méthodes de configuration IP vues en classe, configurez votre interface de sorte à ce que ses paramètres IP soient obtenus par DHCP.
+
+**Validation**
+```powershell
+# Vérifier la config finale
+ipconfig /all
+```
+
+**Attendu final**
+- `DHCP Enabled : Yes`
+- IPv4 dans la plage DHCP du routeur (ex.: 192.168.100.10–192.168.100.20)
+- Passerelle: 192.168.100.1
+- DNS: 192.168.100.1
+
+---
+## Rappel
+À la fin de l’atelier, assurez-vous d’avoir restauré vos paramètres réseau (DHCP) et de valider avec `ipconfig /all`.
+
+## Conseils de dépannage
+### ping
+
+Utilisez `ping` pour valider le fonctionnement du réseau. En cas de problème avec le réseau, essayer de rejoindre des hôtes progressivement plus loin : 
+- Le routeur, directement
+- Un autre hôte dans le même réseau
+- Un hôte sur internet
+
+Le résultat de ces tests peut vous éclairer sur le niveau auquel la connexion échoue.
 
 ````bash
 # Utilisation : ping <adresse de destination>.
@@ -51,80 +181,15 @@ Afin que les exercices ci-dessous puissent fonctionner, vous devez vous assurer 
 # - Aucune réponse n'a été obtenue.
 
 ````
+### Échec DHCP
 
-#### Étape 2 - Connexion des machines virtuelles au réseau: 
+Vous pouvez forcer une requête DHCP avec la commande `ipconfig /renew`. 
 
-**Objectifs de l'étape** : 
-- Connecter les machines virtuellles au réseau.
+Si vous n'avez pas de réponse, que votre adresse IP n'est pas dans la plage indiquée ou que votre adresse ip est dans le réseau 169.254.0.0/16, l'allocation DHCP a échoué.
 
-**Procédure à suivre** : 
-- Démarrer les machines virtuelles.
-- Répéter la même procédure qu'à l'étape 1 mais cette fois-ci sur les machines virtuelles.
-	- **QUESTION** : Est-ce que vous allez avoir besoin de connecter la machine virtuelle par câble? Pourquoi? D'où vient sa connexion au réseau?
-
-**Validation** : 
-- À la fin de cette étape, chacune des machines physiques devraient pouvoir rejoindre chacun des machines virtuelles.
-- Les machines virtuelles devraient pouvoir se rejoindre entre elles.
-
-#### Étape 3 - Manipulation du DHCP : 
-
-**Cette étape est à réaliser sur l'une de vos machines virtuelles.**
-
-**Objectifs de l'étape** : 
-- Pratiquer les commandes permettant d'intéragir avec le DHCP
-
-**Procédure à suivre** : 
-- À l'aide des commandes vuent en classe, identifiez les paramètres IP obtenus par DHCP.
-	- L'adresse IP
-	- L'adresse réseau
-	- La passerelle par défaut
-	- Le serveur DNS
-- En utilisant les commandes vuent en classe, identifiez les informations suivantes : 
-	- Date d'émission du bail DHCP
-	- Date d'expiration du bail DHCP
-	- Durée du bail DHCP
-- En utilisant les commandes vuent en classe, libérez les paramètres IP obtenus par DHCP.
-- À l'aide des commandes vuent en classe, identifiez la configuration IP de votre interface.
-	- **QUESTION** : Qu'est-ce que vous remarquez?
-- À l'aide des commandes vuent en classe, demandez une nouvelle configuration IP via DHCP. Validez ensuite les paramètres qui vous ont été alloués.
-	- **QUESTION** : Est-ce qu'il y a des différences au niveau des paramètres IP? Au niveau du bail? Expliquez pourquoi.
-
-**Validation** : 
-- À la fin de cette étape, chacune des machines physiques devraient pouvoir rejoindre chacun des machines virtuelles.
-- Les machines virtuelles devraient pouvoir se rejoindre entre elles.
-
-#### Étape 4 - Configuration statique : 
-
-**Cette étape est à réaliser sur l'une de vos machines virtuelles.**
-
-**Objectifs de l'étape** : 
-- Pratiquer les manipulations nécessaires à la réalisation d'une configuration IP statique.
-
-**Procédure à suivre** : 
-- Configurez l'une de vos machines virtuelles avec la configuration IP statique suivante  :
-	- Adresse IP : 192.168.100.50
-	- Masque réseau : 255.255.255.0
-	- Passerelle par défaut : 192.168.100.1
-	- DNS : 192.168.100.1
-- À l'aide des commandes vuent en classe, validez la nouvelle configuration IP.
-- Utilisez les commandes vuent en classe pour relâcher l'adresse IP et en demander une autre. 
-	- **QUESTION** : Que se passe-t-il? Pourquoi?
-
-**Validation** : 
-- À la fin de cette étape, chacune des machines physiques devraient pouvoir rejoindre chacun des machines virtuelles.
-- Les machines virtuelles devraient pouvoir se rejoindre entre elles.
-#### Étape 5 - Conflit d'adresse : 
-
-**Objectifs de l'étape** : 
-- Visualiser une erreur de configuration réseau.
-- Mieux comprendre les inconvénients d'une allocation statique d'adresse.
-
-**Procédure à suivre** : 
-- Configurez vos deux machines virtuelles avec la configuration IP statique suivante  :
-	- Adresse IP : 192.168.100.50
-	- Masque réseau : 255.255.255.0
-	- Passerelle par défaut : 192.168.100.1
-	- DNS : 192.168.100.1
-- À l'aide des commandes vuent en classe, validez la nouvelle configuration IP.
-- Sur vos deux machines virtuelles, en même temps, testez la connectivité avec le routeur (le 192.168.100.1). Répétez ce test à quelques reprises.
-	- **QUESTION** : Que se passe-t-il? Formulez une hypothèse expliquant ce que vous voyez.
+Si l'allocation d'adresse par DHCP échoue, vérifiez les éléments suivants : 
+- La connexion physique au routeur.
+	- Est-ce que le câble est branché? Est-ce que le routeur et votre PC détectent la connexion (voyants lumineux)?
+- Le mode de configuration de votre interface
+	- Assurez-vous que votre interface n'est pas configurée statiquement
+	- Vérifiez les paramètres de l'adapteur aussi.

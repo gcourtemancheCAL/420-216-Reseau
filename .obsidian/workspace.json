@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cours-05-domaine/cours05-01-nom-hote-domaine.md",
+                "file": "cours-03-parametres-ip/cours03-04-param-ip.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "cours05-01-nom-hote-domaine"
+              "title": "cours03-04-param-ip"
             }
           }
         ],
@@ -200,27 +200,30 @@
   },
   "active": "bf25522d870938f5",
   "lastOpenFiles": [
+    "cours-03-parametres-ip/cours03-01-adapteurs-intf.md",
+    "cours-03-parametres-ip/cours03-03-supports-physiques.md",
+    "cours-03-parametres-ip/cours03-ex2-config-windows.md",
+    "cours-05-domaine/cours05-01-nom-hote-domaine.md",
+    "cours-05-domaine/cours05-04-quiz-domaines-urls.md",
+    "cours-05-domaine/cours05-02-url.md",
+    "cours-02-adressage-client-serveur/cours02-05-prochain-cours.md",
+    "cours-05-domaine/cours05-03-exercices-domaines-urls.md",
+    "cours-03-parametres-ip/cours03-04-param-ip.md",
+    "cours-05-domaine/img/Pasted image 20260126093139.png",
+    "Pasted image 20260126093113.png",
+    "cours-03-parametres-ip/cours03-05-dhcp.md",
+    "cours-04-masque-reseau/cours04-masque-reseau.md",
+    "cours-05-domaine/img/Pasted image 20260126092905.png",
     "cours-05-domaine/img/Pasted image 20260120150947.png",
     "cours-05-domaine/img/Pasted image 20260120145752.png",
-    "cours-05-domaine/cours05-01-nom-hote-domaine.md",
     "cours-03-parametres-ip/cours03-ex1-manufacturier.md",
-    "cours-03-parametres-ip/cours03-05-dhcp.md",
-    "cours-03-parametres-ip/cours03-04-param-ip.md",
-    "cours-03-parametres-ip/cours03-03-supports-physiques.md",
     "cours-03-parametres-ip/cours03-02-donnees-et-transfert.md",
-    "cours-03-parametres-ip/cours03-01-adapteurs-intf.md",
-    "cours-04-masque-reseau/cours04-masque-reseau.md",
     "cours-04-masque-reseau/img/Pasted image 20260115160209.png",
     "cours-04-masque-reseau/img/Pasted image 20260115160128.png",
     "cours-04-masque-reseau/img/Pasted image 20260115153707.png",
     "cours-04-masque-reseau/img/Pasted image 20260115153934.png",
     "cours-03-parametres-ip/cours03-06-configuration-ip-windows.md",
     "cours-03-parametres-ip/img/Pasted image 20260126091106.png",
-    "cours-03-parametres-ip/img/Pasted image 20260126090849.png",
-    "cours-03-parametres-ip/img/Pasted image 20260126090744.png",
-    "cours-03-parametres-ip/cours03-ex2-config-windows.md",
-    "cours-03-parametres-ip/img/Pasted image 20260126090519.png",
-    "cours-02-adressage-client-serveur/cours02-05-prochain-cours.md",
     "cours-02-adressage-client-serveur/cours02-04-services-communs.md",
     "cours-02-adressage-client-serveur/cours02-03-client-serveur.md",
     "cours-02-adressage-client-serveur/cours02-01-pile-osi.md",
@@ -241,8 +244,6 @@
     "cours-03-parametres-ip/img",
     "cours-03-parametres-ip",
     "cours-01-introduction-reseau/cours01-2-intro-reseau.md",
-    "cours-01-introduction-reseau/cours01-3-types-de-reseaux.md",
-    "cours-01-introduction-reseau/cours01-4-equipement.md",
     "cours-02-adressage-client-serveur/img",
     "cours-02-adressage-client-serveur"
   ]

@@ -8,6 +8,10 @@
 	- chaînes alphanumériques, séparées par des tirets (`-`), sans espaces. 
 	- Insensibles à la casse 
 
+## localhost
+
+Nom d'hôte se faisant référence à la machine locale (soi-même). La version "nom d'hôte" de l'adresse IP de loopback ou de l'interface de loopback.
+
 ## Qu'est-ce qu'un nom de domaine?
 
 **Définition :** Espace de nommage hiérarchique utilisé pour nommer et retrouver des ressources sur Internet ou un réseau privé. 
@@ -18,6 +22,8 @@
 **TLD (Top Level Domain) :** Suffixe de plus haut niveau (ex. `.com`, `.org`, `.ca`, `.edu`). Gérés par des registres et l'ICANN/autorités nationales.
 
 **Sous-domaine :** Division logique d'un domaine pour organiser des services ou des sites (ex. `app.example.com`, `eu.wiki.org`). Chaque point introduit un niveau hiérarchique supplémentaire.
+
+<img src="img/Pasted image 20260126092905.png" width="300" />
 
 **Quelques exemples :**
 - `www.google.com` → hôte `www`, domaine `google.com`, TLD `.com`
@@ -86,9 +92,9 @@ mDNS est très utile pour partager des resources dans un petit réseau local tel
 
 ### Les étapes suivies par Windows
 1. Cache DNS local
-2. Consulte le fichier `hosts` local.
-3. Si le tld est `.local`, Windows va diffuser une requête mDNS sur le réseau local.
-4. Interroge les serveurs DNS configurés sur l'interface active.
+	1. Les entrées sont mises dans la cache DNS locale après modification du fichier. Le fichier `hosts` n'est donc pas directement consulté par Windows lors d'une résolution DNS.
+2. Si le tld est `.local`, Windows va diffuser une requête mDNS sur le réseau local.
+3. Interroge les serveurs DNS configurés sur l'interface active.
 
 #### La cache DNS
 
@@ -141,3 +147,7 @@ nslookup 8.8.8.8
 # DNS se situant au 1.1.1.1 (on veut l'adresse IP associé à www.example.com)
 nslookup www.example.com 1.1.1.1
 ```
+
+<hr>
+
+[Suivant](cours05-02-url.md)

@@ -56,6 +56,8 @@ Il existe une catégorie d'adresse IP que l'on appel **adresses de loopback**.
 
 Ces adresses sont analogues aux interfaces de loopback - elles permettent à un système de communiquer avec lui-même.
 
+<img src="img/Pasted image 20260115113647.png" width="500" />
+
 En IPv4, toutes les adresses du réseau `127.0.0.0/8` sont des adresses de loopback. Typiquement, on va utiliser le `127.0.0.1`
 
 Sur IPv6, on utilise le `00:00:00:00:00:00:00:01`, souvent abbrévié `::1`
