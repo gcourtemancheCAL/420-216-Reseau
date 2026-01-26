@@ -1,22 +1,4 @@
 # Architecture Client/Serveur
-## Architecture Master/Slave
-
-Architecture commune dans les contextes embarqués dans laquelle un appareil (le maitre) est responsable de gérer les autres appareils (esclaves) en leur envoyant des requêtes et des directives.
-
-Dans cette architecture, le maitre doit connaitre tous les systèmes esclaves. Les systèmes esclaves attendent des instructions du maitre.
-
-
-<img src="img/Pasted image 20260114143145.png" width="700" />
-
-Ce genre d'architecture se présente beaucoup lorsqu'il est question de systèmes résilients et distribués (serveurs web, base de données, etc...).
-
-## Architecture peer to peer
-
-Architecture sans autorité centralisée, les différents participant se 'découvre' et s'organise mutuellement.
-
-<img src="img/Pasted image 20260114143431.png" width="700" />
-
-**Exemple** : bittorrent
 
 ## Architecture client/serveur
 
@@ -49,6 +31,27 @@ Dépendemment  du contexte, un même système peut jouer le rôle de client ou d
 <img src="img/Pasted image 20260114150800.png" width="800" />
 
 Dans cet exemple, le système "server" va faire office de serveur lorsque les différents client lui envoient des requêtes. Dans son intéraction avec la base de données, il va être le client et la base de donnée va être le serveur.
+
+## Autres architectures
+### Architecture Master/Slave
+
+Architecture commune dans les contextes embarqués dans laquelle un appareil (le maitre) est responsable de gérer les autres appareils (esclaves) en leur envoyant des requêtes et des directives.
+
+Dans cette architecture, le maitre doit connaitre tous les systèmes esclaves. Les systèmes esclaves attendent des instructions du maitre.
+
+
+<img src="img/Pasted image 20260114143145.png" width="700" />
+
+Ce genre d'architecture se présente beaucoup lorsqu'il est question de systèmes résilients et distribués (serveurs web, base de données, etc...).
+
+### Architecture peer to peer
+
+Architecture sans autorité centralisée, les différents participant se 'découvre' et s'organise mutuellement.
+
+<img src="img/Pasted image 20260114143431.png" width="700" />
+
+**Exemple** : bittorrent, freenet
+
 
 <hr>
 
