@@ -32,8 +32,8 @@ ipconfig /all
 ```
 
 **Attendus**
-- Votre IPv4 doit être dans la plage 192.168.100.10–192.168.100.20.
-- La passerelle par défaut doit être 192.168.100.1.
+- Votre IPv4 doit être dans la plage `192.168.100.100`–`192.168.100.199`.
+- La passerelle par défaut doit être `192.168.100.1`.
 
 **Validation de connectivité**
 ```powershell

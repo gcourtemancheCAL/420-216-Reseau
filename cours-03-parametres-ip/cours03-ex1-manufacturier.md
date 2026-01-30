@@ -26,6 +26,6 @@ Identifiez l'adapteur qui vous intéresse sur la base de son nom. L'adresse MAC 
 
 ## 2. Identifier le manufacturier
 
-Suivez le lien suivant : https://dnschecker.org/mac-lookup.php
+Suivez le lien suivant : https://maclookup.app/
 
 Entrez votre adresse MAC dans le champs correspondant et cliquez sur "search".
