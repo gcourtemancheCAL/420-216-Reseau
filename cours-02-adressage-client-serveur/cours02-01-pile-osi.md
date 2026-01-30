@@ -54,8 +54,18 @@ Cette couche définie les standards physiques permettant la communication : les 
 
 ## Encapsulation
 
-<img src="img/Pasted image 20260114105322.png" width="700" />
+Les protocoles d'un niveau spécifique vont communiquer avec les niveaux équivalents sur l'hôte de destination
 
+<img src="img/Pasted image 20260130133959.png" width="700" />
+
+Lorsqu'un hôte communique avec un autre, la pile va être utilisée dans sont entièreté.
+
+Les messages que l'on envoie sont d'abord générés par l'application qui procède à la communication réseau (niveau 7). Le message va ensuite descendre le long de la pile, se faisant ajouter des informations à chaque niveau. 
+
+Les informations ajoutés sont utilisés par les équipement intermédiaire et finaux afin de transmettre le message jusqu'au système de destination, puis ensuite au processus de destination. 
+
+<img src="img/Pasted image 20260114105322.png" width="700" />
+Le système de destination va recevoir les bits composant le message au niveau de la couche physique. Les données vont monter tout le long de la pile. À chaque niveau monté, un PDU en est extrait. 
 ### Analogie boiteuse
 
 **Situation** : _Alice_, employée chez **Initech**, doit transmettre un rapport TPS à _Bob_, employé chez **OrgTech**.

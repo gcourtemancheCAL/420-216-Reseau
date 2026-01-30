@@ -64,6 +64,6 @@ Pour une connexion WiFi, vous allez devoir sélectioner le réseau auquel vous �
 
 <hr>
 
-[Précédent](cours03-05-dhcp.md)
+[Précédent](cours04-02-dhcp.md)
 
 

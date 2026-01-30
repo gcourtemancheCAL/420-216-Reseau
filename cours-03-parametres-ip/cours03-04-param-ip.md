@@ -65,4 +65,4 @@ Sur IPv6, on utilise le `00:00:00:00:00:00:00:01`, souvent abbrévié `::1`
 
 <hr>
 
-[Précédent](cours03-03-supports-physiques.md) - [Suivant](cours03-05-dhcp.md)
+[Précédent](cours03-03-supports-physiques.md) - [Suivant](cours03-05-topologie.md)
