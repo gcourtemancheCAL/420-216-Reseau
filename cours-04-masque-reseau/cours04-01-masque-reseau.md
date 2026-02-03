@@ -9,6 +9,7 @@ Rappel : la valeur d'un bit dépend de sa position.
 | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 128 | 64  | 32  | 16  | 8   | 4   | 2   | 1   |
+
 On va qualifier de "poid fort" les bits qui ont une plus grosse valeur, et de "poid faible" les bits qui ont une valeur plus faible.
 
 Donc, dans cet exemple, si je parles des 4 bits de poid fort, je parles des 4 bits les plus à gauche.
@@ -73,6 +74,7 @@ La méthode fonctionne par soustraction successive.
 **Résultat : 0101 0101**
 
 [Vidéo de la méthode](https://www.youtube.com/watch?v=OXj_-dyKsGI)
+
 ### Masques binaires
 
 Un masque binaire est un outil fréquemment utilisé en informatique afin d'isoler une information statique d'une donnée binaire variable.
