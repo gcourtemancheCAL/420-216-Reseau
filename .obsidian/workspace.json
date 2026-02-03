@@ -29,7 +29,7 @@
               "state": {
                 "file": "cours-04-masque-reseau/cours04-01-masque-reseau.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "cours04-01-masque-reseau"
@@ -200,6 +200,8 @@
   },
   "active": "5ed9340930400c7a",
   "lastOpenFiles": [
+    "cours-03-parametres-ip/cours03-05-topologie.md",
+    "cours-04-masque-reseau/cours04-01-masque-reseau.md",
     "cours-05-domaine/cours05-04-prep-prochain-cours.md",
     "cours-05-domaine/cours05-prep-prochain-cours.md",
     "cours-05-domaine/cours05-devoir-installation-vm-debian.docx",
@@ -224,8 +226,6 @@
     "cours-04-masque-reseau/cours04-ex-config-windows.md",
     "cours-04-masque-reseau/cours04-03-configuration-ip-windows.md",
     "cours-04-masque-reseau/cours04-02-dhcp.md",
-    "cours-04-masque-reseau/cours04-01-masque-reseau.md",
-    "cours-03-parametres-ip/cours03-05-topologie.md",
     "cours-03-parametres-ip/cours03-ex1-manufacturier.md",
     "cours-03-parametres-ip/cours03-04-param-ip.md",
     "cours-03-parametres-ip/img/Pasted image 20260130134759.png",
