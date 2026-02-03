@@ -91,7 +91,7 @@ On appel cette adresse auto-assignée une adresse APIPA (_Automatic Private IP A
 
 <hr>
 
-[Précédent](cours03-04-param-ip.md) - [Suivant](cours04-03-configuration-ip-windows.md)
+[Précédent](cours04-01-masque-reseau.md) - [Suivant](cours04-03-configuration-ip-windows.md)
 
 
 

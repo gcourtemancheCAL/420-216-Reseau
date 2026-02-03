@@ -217,7 +217,7 @@ Measure-Command -Expression { ping -i 1 -n 1 -w 1 www.ujjivansfb.bank.in }
    ```bash
    sudo nano /etc/resolv.conf
    ```
-3. Ajoutez ou modifiez pour utiliser les DNS de Google :
+3. Modifiez pour utiliser les DNS de Google :
    ```
    nameserver 8.8.8.8
    nameserver 8.8.4.4
