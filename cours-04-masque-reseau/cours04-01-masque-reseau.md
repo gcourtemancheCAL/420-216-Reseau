@@ -141,3 +141,14 @@ Le masque identifie la partie binaire de l’adresse IP servant à identifier le
 <img src="img/Pasted image 20260115160128.png" width="800" />
 
 <img src="img/Pasted image 20260115160209.png" width="800" />
+#### CIDR : Raccourci par octet
+| 0   | 0   | 0000 0000 |
+| --- | --- | --------- |
+| 1   | 128 | 1000 0000 |
+| 2   | 192 | 1100 0000 |
+| 3   | 224 | 1110 0000 |
+| 4   | 240 | 1111 0000 |
+| 5   | 248 | 1111 1000 |
+| 6   | 252 | 1111 1100 |
+| 7   | 254 | 1111 1110 |
+| 8   | 255 | 1111 1111 |
