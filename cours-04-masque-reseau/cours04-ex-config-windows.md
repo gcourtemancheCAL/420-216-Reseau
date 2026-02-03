@@ -106,7 +106,9 @@ ping 192.168.100.1
 
 ---
 
-## Étape 4 — Conflit d’adresse IP
+## Étape 4 — Collision d’adresse IP
+
+### Note importante : il est possible que cette étape ne soit pas réalisable. Windows essaie de détecter et prévenir les collision d'adresse.
 
 **Objectifs**
 - Observer une erreur classique de configuration: duplication d’IP

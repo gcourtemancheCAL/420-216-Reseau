@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cours-04-masque-reseau/cours04-01-masque-reseau.md",
+                "file": "cours-04-masque-reseau/cours04-ex-config-windows.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "cours04-01-masque-reseau"
+              "title": "cours04-ex-config-windows"
             }
           }
         ],
@@ -198,11 +198,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "a5f165504f078308",
+  "active": "5ed9340930400c7a",
   "lastOpenFiles": [
+    "cours-04-masque-reseau/cours04-01-masque-reseau.md",
+    "cours-04-masque-reseau/img/Pasted image 20260115120728.png",
+    "cours-04-masque-reseau/img/Pasted image 20260115113647.png",
+    "cours-04-masque-reseau/img/Pasted image 20260115112253.png",
+    "cours-04-masque-reseau/img/Pasted image 20260115111818.png",
+    "cours-04-masque-reseau/img/Pasted image 20260115105249.png",
+    "cours-04-masque-reseau/img/Pasted image 20260115095311.png",
+    "cours-04-masque-reseau/img/Pasted image 20260115094809.png",
+    "cours-04-masque-reseau/img/Pasted image 20260115094316.png",
+    "cours-04-masque-reseau/img/Pasted image 20260115091816.png",
+    "cours-04-masque-reseau/img/Pasted image 20260115091354.png",
     "cours-04-masque-reseau/cours04-03-configuration-ip-windows.md",
     "cours-04-masque-reseau/cours04-02-dhcp.md",
-    "cours-04-masque-reseau/cours04-01-masque-reseau.md",
     "cours-04-masque-reseau/cours04-ex-config-windows.md",
     "cours-03-parametres-ip/cours03-05-topologie.md",
     "cours-03-parametres-ip/cours03-02-donnees-et-transfert.md",
@@ -214,8 +224,6 @@
     "cours-07/atelier-integre-windows-linux.md",
     "cours-07",
     "cours-04-masque-reseau/atelier-integre-windows-linux.md",
-    "cours-06-configuration-linux/img/Pasted image 20260202092820.png",
-    "cours-06-configuration-linux/img/Pasted image 20260202092105.png",
     "cours-06-configuration-linux/img",
     "cours-06-configuration-linux/Untitled",
     "cours-06-configuration-linux/cours06-at2-ifupdown.md",
@@ -230,18 +238,9 @@
     "Untitled",
     "cours-03-parametres-ip/cours03-ex1-manufacturier.md",
     "cours-03-parametres-ip/cours03-04-param-ip.md",
-    "cours-03-parametres-ip/img/Pasted image 20260130134759.png",
     "cours-02-adressage-client-serveur/cours02-01-pile-osi.md",
-    "cours-02-adressage-client-serveur/img/Pasted image 20260130133959.png",
     "cours-03-parametres-ip/cours03-03-supports-physiques.md",
     "cours-01-introduction-reseau/cours01-2-intro-reseau.md",
-    "cours-01-introduction-reseau/cours01-1-presentation.md",
-    "cours-02-adressage-client-serveur/img/Pasted image 20260114104806.png",
-    "cours-05-domaine/img/Pasted image 20260126093139.png",
-    "Pasted image 20260126093113.png",
-    "cours-05-domaine/img/Pasted image 20260126092905.png",
-    "cours-05-domaine/img/Pasted image 20260120150947.png",
-    "cours-05-domaine/img/Pasted image 20260120145752.png",
     "cours-01-introduction-reseau/plan-de-cours.pdf",
     "cours-01-introduction-reseau/420-216-AL- H26-GCourtemanche.pdf",
     "cours-05-domaine/img",
