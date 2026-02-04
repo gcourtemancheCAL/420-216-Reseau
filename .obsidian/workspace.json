@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cours-04-masque-reseau/cours04-04-configuration-du-parefeu.md",
+                "file": "cours-04-masque-reseau/cours04-ex-config-windows.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "cours04-04-configuration-du-parefeu"
+              "title": "cours04-ex-config-windows"
             }
           }
         ],
@@ -200,21 +200,23 @@
   },
   "active": "5ed9340930400c7a",
   "lastOpenFiles": [
-    "cours-04-masque-reseau/cours04-03-configuration-ip-windows.md",
-    "cours-04-masque-reseau/cours04-04-configuration-du-parefeu.md",
-    "cours-04-masque-reseau/cours04-02-dhcp.md",
-    "cours-04-masque-reseau/cours04-ex-config-windows.md",
     "cours-04-masque-reseau/img/Pasted image 20260204100719.png",
     "cours-04-masque-reseau/img/Pasted image 20260204100621.png",
     "cours-04-masque-reseau/img/Pasted image 20260204100556.png",
     "cours-04-masque-reseau/img/Pasted image 20260204100514.png",
     "cours-04-masque-reseau/img/Pasted image 20260204100434.png",
+    "cours-04-masque-reseau/cours04-04-configuration-du-parefeu.md",
     "cours-04-masque-reseau/img/Pasted image 20260204100126.png",
+    "cours04-04-configuration-du-parefeu.md",
     "cours-04-masque-reseau/cours04-01-masque-reseau.md",
     "cours-04-masque-reseau/img/Pasted image 20260115120728.png",
     "cours-04-masque-reseau/img/Pasted image 20260115113647.png",
     "cours-04-masque-reseau/img/Pasted image 20260115112253.png",
     "cours-04-masque-reseau/img/Pasted image 20260115111818.png",
+    "cours-04-masque-reseau/img/Pasted image 20260115105249.png",
+    "cours-04-masque-reseau/cours04-03-configuration-ip-windows.md",
+    "cours-04-masque-reseau/cours04-02-dhcp.md",
+    "cours-04-masque-reseau/cours04-ex-config-windows.md",
     "cours-03-parametres-ip/cours03-05-topologie.md",
     "cours-03-parametres-ip/cours03-02-donnees-et-transfert.md",
     "cours-03-parametres-ip/cours03-01-adapteurs-intf.md",
@@ -240,7 +242,6 @@
     "cours-03-parametres-ip/cours03-ex1-manufacturier.md",
     "cours-03-parametres-ip/cours03-04-param-ip.md",
     "cours-02-adressage-client-serveur/cours02-01-pile-osi.md",
-    "cours-03-parametres-ip/cours03-03-supports-physiques.md",
     "cours-01-introduction-reseau/plan-de-cours.pdf",
     "cours-01-introduction-reseau/420-216-AL- H26-GCourtemanche.pdf",
     "cours-05-domaine/img",

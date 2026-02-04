@@ -94,6 +94,7 @@ En utilisant l'une des méthodes de configuration IP vues en classe, configurez 
 - Masque: 255.255.255.0 (/24)
 - Passerelle: 192.168.100.1
 - DNS: 192.168.100.1
+- DNS2 : 8.8.8.8
 
 **Validation**
 ```powershell
@@ -147,6 +148,7 @@ ipconfig /all
 - IPv4 dans la plage DHCP du routeur (ex.: 192.168.100.10–192.168.100.20)
 - Passerelle: 192.168.100.1
 - DNS: 192.168.100.1
+- DNS2 : 8.8.8.8
 
 ---
 ## Rappel
