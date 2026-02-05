@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cours-04-masque-reseau/cours04-ex-config-windows.md",
+                "file": "cours-05-domaine/cours05-02-url.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "cours04-ex-config-windows"
+              "title": "cours05-02-url"
             }
           }
         ],
@@ -200,24 +200,24 @@
   },
   "active": "5ed9340930400c7a",
   "lastOpenFiles": [
+    "cours-05-domaine/cours05-01-nom-hote-domaine.md",
+    "cours-04-masque-reseau/cours04-03-configuration-ip-windows.md",
+    "cours-04-masque-reseau/cours04-ex-config-windows.md",
+    "cours-04-masque-reseau/cours04-04-configuration-du-parefeu.md",
+    "cours-04-masque-reseau/cours04-02-dhcp.md",
+    "cours-04-masque-reseau/cours04-01-masque-reseau.md",
+    "cours-03-parametres-ip/cours03-05-topologie.md",
     "cours-04-masque-reseau/img/Pasted image 20260204100719.png",
     "cours-04-masque-reseau/img/Pasted image 20260204100621.png",
     "cours-04-masque-reseau/img/Pasted image 20260204100556.png",
     "cours-04-masque-reseau/img/Pasted image 20260204100514.png",
     "cours-04-masque-reseau/img/Pasted image 20260204100434.png",
-    "cours-04-masque-reseau/cours04-04-configuration-du-parefeu.md",
     "cours-04-masque-reseau/img/Pasted image 20260204100126.png",
     "cours04-04-configuration-du-parefeu.md",
-    "cours-04-masque-reseau/cours04-01-masque-reseau.md",
     "cours-04-masque-reseau/img/Pasted image 20260115120728.png",
     "cours-04-masque-reseau/img/Pasted image 20260115113647.png",
     "cours-04-masque-reseau/img/Pasted image 20260115112253.png",
     "cours-04-masque-reseau/img/Pasted image 20260115111818.png",
-    "cours-04-masque-reseau/img/Pasted image 20260115105249.png",
-    "cours-04-masque-reseau/cours04-03-configuration-ip-windows.md",
-    "cours-04-masque-reseau/cours04-02-dhcp.md",
-    "cours-04-masque-reseau/cours04-ex-config-windows.md",
-    "cours-03-parametres-ip/cours03-05-topologie.md",
     "cours-03-parametres-ip/cours03-02-donnees-et-transfert.md",
     "cours-03-parametres-ip/cours03-01-adapteurs-intf.md",
     "cours-05-domaine/cours05-04-prep-prochain-cours.md",

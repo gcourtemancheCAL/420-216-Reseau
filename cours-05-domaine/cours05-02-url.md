@@ -140,10 +140,10 @@ Voici des exemples d'URLs complets avec leurs composants décomposés:
 
 ## Exemple 1: URL simple
 ```
-https://www.cegepal.ca/index.html
+https://www.claurendeau.qc.ca/index.html
 ```
 - **Protocole**: https
-- **Hôte**: www.cegepal.ca
+- **Hôte**: www.claurendeau.qc.ca
 - **Port**: 443 (par défaut, non spécifié)
 - **Chemin**: /index.html
 

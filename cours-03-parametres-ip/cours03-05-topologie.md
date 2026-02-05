@@ -1,6 +1,7 @@
 **Situation** : Le système "Source" envoie un message au système "Destination".
 
 <img src="img/Pasted image 20260130134759.png" width="700" />
+
 1. Le système `Source` génère un message aux niveaux applicatifs (*Niveaux 7-6-5*)
 2. Le message est encapsulé dans un segment TCP (*Niveau 4*)
 3. Le segment est encapsulé dans un paquet IP. L'adresse de destination du paquet est l'adresse ip du système `Destination` - le 10.0.0.2. (*Niveau 3*)
