@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cours-05-domaine/cours05-02-url.md",
+                "file": "cours-05-domaine/cours05-03-exercices-domaines-urls.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "cours05-02-url"
+              "title": "cours05-03-exercices-domaines-urls"
             }
           }
         ],
@@ -200,7 +200,10 @@
   },
   "active": "5ed9340930400c7a",
   "lastOpenFiles": [
+    "cours-05-domaine/cours05-04-prep-prochain-cours.md",
+    "cours-05-domaine/cours05-03-exercices-domaines-urls.md",
     "cours-05-domaine/cours05-01-nom-hote-domaine.md",
+    "cours-05-domaine/cours05-02-url.md",
     "cours-04-masque-reseau/cours04-03-configuration-ip-windows.md",
     "cours-04-masque-reseau/cours04-ex-config-windows.md",
     "cours-04-masque-reseau/cours04-04-configuration-du-parefeu.md",
@@ -220,7 +223,6 @@
     "cours-04-masque-reseau/img/Pasted image 20260115111818.png",
     "cours-03-parametres-ip/cours03-02-donnees-et-transfert.md",
     "cours-03-parametres-ip/cours03-01-adapteurs-intf.md",
-    "cours-05-domaine/cours05-04-prep-prochain-cours.md",
     "cours-05-domaine/cours05-prep-prochain-cours.md",
     "cours-05-domaine/cours05-devoir-installation-vm-debian.docx",
     "cours-07/cours07-at-integrateur.md",
@@ -240,8 +242,6 @@
     "cours-06-configuration-linux",
     "Untitled",
     "cours-03-parametres-ip/cours03-ex1-manufacturier.md",
-    "cours-03-parametres-ip/cours03-04-param-ip.md",
-    "cours-02-adressage-client-serveur/cours02-01-pile-osi.md",
     "cours-01-introduction-reseau/plan-de-cours.pdf",
     "cours-01-introduction-reseau/420-216-AL- H26-GCourtemanche.pdf",
     "cours-05-domaine/img",

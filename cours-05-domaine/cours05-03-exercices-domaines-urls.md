@@ -316,25 +316,6 @@ ping -c 10 www.github.com
 - À quel information correspond le temps associé à chaque tentative de ping?
 - Y a-t-il des pertes de paquets?
 
-### Exercice 6.2 : Comparer ping avec IP vs nom (Windows/Linux)
-
-**Objectif :** Comprendre l'impact de la résolution DNS sur le temps de réponse
-
-**Tâches :**
-1. Trouvez l'IP de google.com avec nslookup
-2. Pingez avec le nom de domaine :
-   ```bash
-   ping www.google.com
-   ```
-3. Pingez avec l'adresse IP directement :
-   ```bash
-   ping [adresse_ip_trouvée]
-   ```
-
-**Questions :**
-- Y a-t-il une différence de temps au premier paquet?
-- Pourquoi utiliser l'IP directement peut-il être plus rapide?
-
 ---
 
 ## Ressources supplémentaires
