@@ -260,7 +260,7 @@ Measure-Command -Expression { ping -i 1 -n 1 -w 1 www.ujjivansfb.bank.in }
 
 **Tâches :**
 1. Installez curl si nécessaire (déjà inclus dans Windows 10/11 et la plupart des distributions Linux)
-	1. **Sur linux** : `yes | sudo apt install curl`
+	1. **Sur linux** : `sudo apt install -y curl`
 
 2. Récupérez la page d'accueil de Google :
    ```bash
@@ -275,6 +275,7 @@ Measure-Command -Expression { ping -i 1 -n 1 -w 1 www.ujjivansfb.bank.in }
 **Questions :**
 - Quelle est la différence de résultat entre "http" et "https"?
 - Qu'est-ce que "http" et "https" représentent dans l'url?
+
 ### Exercice 5.2 : Tester des ports personnalisés (Windows/Linux)
 
 **Objectif :** Comprendre l'utilisation des ports dans les URLs
@@ -289,6 +290,33 @@ Measure-Command -Expression { ping -i 1 -n 1 -w 1 www.ujjivansfb.bank.in }
    ```bash
    curl http://www.google.com:8080
    ```
+### Exercice 5.3 : Connexion à l'adresse ip
+
+#### Exercice 5.3.1 - Cas de figure normal
+
+**Objectif :** Comprendre les formes que peuvent prendre l'hôte dans l'url et comprendre la différence entre domaine et url.
+
+1. En utilisant votre navigateur web, connectez-vous au `http://www.midwinter.com/lurk/`. Prenez un instant pour admirer le look sublime de la page!
+2. À l'aide de `nslookup`, identifiez l'adresse IP associé au domaine.
+3. Connectez à ce même site en utilisant directement son adresse IP dans l'url.
+
+**N.B :** Vous devriez attérir sur la même page.
+
+#### Exercice 5.3.2 - Cas de figure spécial
+
+Répetez la procédure précédente, mais cette fois ci pour l'url `http://www.example.com/`
+
+**Question** : Est-ce que vous arrivez sur la même page? Qu'est-ce qui explique le résultat?
+
+### Exercice 5.4 : URL et domaine
+
+**Objectif :** Comprendre la différence entre un url et un domaine comme argument à une commande.
+
+1. Utilisez la commande `ping` afin de rejoindre `www.google.com`
+2. Utilisez la commande `nslookup` afin de résoude le `www.google.com`
+3. Répetez ces deux étapes avec l'url `https://www.google.com`
+
+**Question :** Expliquez pourquoi les commandes ne fonctionnent pas lorsqu'un url est utilisé. 
 
 ---
 
@@ -315,6 +343,8 @@ ping -c 10 www.github.com
 - Quelle IP est résolue pour chaque domaine?
 - À quel information correspond le temps associé à chaque tentative de ping?
 - Y a-t-il des pertes de paquets?
+
+## Partie 7 : Analyse réseau avec ping
 
 ---
 

@@ -1,8 +1,8 @@
-# Atelier formatif — Configuration IP temporaire avec `ip` et `dhclient`
+# Atelier formatif — Configuration IP temporaire avec `ip`
 
 ## Objectif général
 
-L'objectif de cet atelier consiste à se familiariser à l'utilisation des commandes `ip` et `dhclient` dans un contexte dans lequel nous allons vouloir obtenir des informations sur notre système mais aussi modifier les paramètres actuels de notre système.
+L'objectif de cet atelier consiste à se familiariser à l'utilisation des commandes `ip` dans un contexte dans lequel nous allons vouloir obtenir des informations sur notre système mais aussi modifier les paramètres actuels de notre système.
 
 Cet atelier peut être réalisé seul ou en groupe. 
 
@@ -23,7 +23,7 @@ Cet atelier est à réaliser sur une machine virtuelle sur laquelle vous aurez p
 
 **Instructions de mise en place :**
 - Connectez, par câble, votre ordinateur portable au routeur mis à votre disposition.
-- Configurez votre machine virtuelle en mode réseau "par pont" ou "bridged adapter". Vous devrez - à cet étape - sélectionner l'adaptateur physique avec lequel vous allez effectuer un pont. Sélectionnez votre adaptateur ethernet.
+- Configurez votre machine virtuelle en mode réseau "par pont" ou "bridged adapter". Vous devrez - à cette étape - sélectionner l'adaptateur physique avec lequel vous allez effectuer un pont. Sélectionnez votre adaptateur ethernet.
 - Démarrez votre machine virtuelle.
 - Une fois la machine virtuelle démarrée, testez la connectivité au réseau à l'aide de la commande `ping -c 4 192.168.100.1`
 
@@ -42,12 +42,11 @@ Pour cette partie, il est assumer que votre système dispose de la configuration
 En utilisant la commande apropriée, affichez les paramètres IP de vos interfaces.
 
 **Général**
-1. Quels interfaces sont disponibles sur votre système?
+1. Quelles interfaces sont disponibles sur votre système?
 2. Sur la base de leur nom identifier de quel genre d'interface il s'agit (interface de loopback, interface ethernet, interface wifi, intégré à la carte mère, carte d'extension, interface virtuelle).
 
 **Interface de loopback**
 1. Quelle est l'adresse IP de l'interface de loopback? 
-2. D'où vient cette adresse?
 
 **Interface active**
 *Par **interface active** on veut dire l'interface connectée au réseau.*
@@ -66,7 +65,7 @@ En utilisant la commande apropriée, affichez l’état des liens (UP/DOWN) et l
 
 ---
 
-### A3 — Afficher les de routing
+### A3 — Afficher les informations de routing
 
 En utilisant la commande apropriée, identifiez la passerelle par défaut de votre système.
 
@@ -83,19 +82,21 @@ En utilisant la commande apropriée, identifiez la passerelle par défaut de vot
 
 ### B1 — Désactiver et réactiver une interface
 1. Utilisez `ping` pour tester la connectivité avec votre passerelle par défaut.
-2. Désactivez l’interface active.
+2. Utilisez la commande `ifdown [votre interface]`
+	1. e.g. `ifdown enp0s3`
+	2. Cette commande va retirer la configuration de votre interface et la désactiver.
 3. Vérifiez qu’elle est maintenant DOWN.
 4. Utilisez `ping` pour tester la connectivité avec votre passerelle par défaut. 
 	1. **Question** : Êtes-vous en mesure de rejoindre la passerelle? Pourquoi?
-5. Réactivez l’interface.
+5. Réactivez l’interface avec la commande `ip`.
 6. Vérifiez qu’elle est UP.
-	1. Vous devriez maintenant pouvoir rejoindre la passerelle avec `ping`
-
+	1. Êtes-vous capable de rejoindre votre passerelle? Pourquoi?
+	
 ---
 
-### B2 — Ajouter une adresse IP statique secondaire
-1. Ajoutez une **adresse IPv4 secondaire** sur l’interface active (ex. `192.168.100.110/24`).
-	1. Pour éviter les conflits avec le DHCP, utilisez une adresse entre `192.168.100.100` et  `192.168.100.200`
+### B2 — Ajouter une adresse IP statique 
+1. Ajoutez une **adresse IPv4** sur l’interface active (ex. `192.168.100.50/24`).
+	1. Pour éviter les conflits avec le DHCP, utilisez une adresse entre `192.168.100.50` et  `192.168.100.80`
 	2. Validez avec vos voisins de rangée que vous n'utilisez pas les mêmes adresses.
 2. Vérifiez qu’elle est bien ajoutée.
 3. À partir d'un autre système (votre ordinateur portable ou la machine virtuelle d'un coéquipié) : 
@@ -105,69 +106,55 @@ En utilisant la commande apropriée, identifiez la passerelle par défaut de vot
 
 ---
 
-### B3 — Retirer l’adresse IP secondaire
-1. Retirez l’adresse ajoutée à l’étape précédente.
-2. Vérifiez qu’elle a disparu.
+### B3 — Ajouter une adresse IP statique secondaire
+1. Ajoutez une **adresse IPv4 secondaire** sur l’interface active (ex. `192.168.100.50/24`).
+	1. Pour éviter les conflits avec le DHCP, utilisez une adresse entre `192.168.100.50` et  `192.168.100.80`
+	2. Validez avec vos voisins de rangée que vous n'utilisez pas les mêmes adresses.
+2. Vérifiez qu’elle est bien ajoutée.
 3. À partir d'un autre système (votre ordinateur portable ou la machine virtuelle d'un coéquipié) : 
 	1. Essayez de rejoindre votre machine virtuelle via sa nouvelle adresse IP.
 	2. Essayez de rejoindre votre machine virtuelle via son autre adresse IP.
 
+---
+
+### B4 — Retirer l’adresse IP secondaire
+1. Retirez l’adresse ajoutée à l’étape précédente.
+2. Vérifiez qu’elle a disparu.
+3. À partir d'un autre système (votre ordinateur portable ou la machine virtuelle d'un coéquipié) : 
+	1. Essayez de rejoindre votre machine virtuelle via son adresse IP restante.
+	2. Essayez de rejoindre votre machine virtuelle l'adresse IP retirée.
+
 
 ---
 
-### B4 — Remplacer l’adresse IP principale
+### B5 — Remplacer l’adresse IP principale
 1. Remplacez l’adresse IP principale par une autre adresse valide du même sous-réseau.
 2. Vérifiez le changement.
 3. **Testez la connectivité** vers la passerelle (ping).
 
 ---
 
-### B5 — Modification de la passerelle
-1. Essayez de rejoindre `www.google.com` via ping. 
-	1. Vers quelle adresse IP est-ce que `ping` envoie ses messages ICMP?
-	2. En utilisant votre masque réseau, calculez l'adresse réseau de `www.google.com`
-	3. Est-ce que `www.google.com` est dans le même réseau que vous? Qu'est-ce que cela implique au niveau de la liaison (couche 2)?
-2. Essayez de ping les systèmes suivant en utilisant leur adresses IP :
-	1. `www.google.com`
-	2. Votre routeur (le 192.168.100.1)
-3. Supprimez la passerelle par défaut de votre système.
-4. Essayez de ping les systèmes suivant en utilisant leur adresses IP :
-	1. `www.google.com`
-	2. Votre routeur (le 192.168.100.1)
-5. Qu'est-ce qui se passe? Pourquoi êtes vous capable de rejoindre l'un des systèmes mais pas l'autre?
-6. Ajoutez la précédente passerelle par défaut.
+### B6 — Ajout de la passerelle
+1. Essayez de rejoindre le `8.8.8.8` via ping. 
+	1. En utilisant votre masque réseau, calculez l'adresse réseau du `8.8.8.8`
+	2. Est-ce dans le même réseau que vous? Qu'est-ce que cela implique au niveau de la liaison (couche 2)?
+2. Identifiez la passerelle présentement active sur votre système.
+	1. Que remarquez-vous?
+3. Ajoutez une passerelle à l'aide de la commande `ip`.
+4. Essayez de rejoindre le `8.8.8.8` via ping. Vous devriez maintenant en être capable.
+
+### B7 — Serveur DNS
+1. Essayez de rejoindre le `www.google.com` via ping. 
+2. Essayez de résoudre le `www.google.com` avec `nslookup`
+3. Essayez de résoudre le `www.google.com` avec `nslookup` en utilisant le serveur DNS se situant au `8.8.8.8`
+
+Que remarquez-vous à travers ces 3 manipulations? Quelle conclusion peut on en tirer sur votre système?
+
+Ajoutez l'entrée `nameserver 8.8.8.8` dans le fichie `/etc/resolv.conf` et répetez de nouveaux les 3 manipulations précédentes. Que remarquez-vous?
 
 ---
 
-### B6 — Supprimer toutes les adresses IP
-1. Supprimez toutes les adresses IPv4 de l’interface.
-2. Vérifiez qu’il n’y a plus d’IPv4.
-3. Essayez de rejoindre la passerelle avec ping. Qu'est-ce qui se passe?
-
-
----
-
-## Partie C — DHCP avec `dhclient`
-
-### C1 — Obtenir une configuration DHCP
-1. Utilisez `dhclient` pour obtenir une nouvelle configuration.
-2. Vérifiez les paramètres IP qui vous ont été assignés (adresse,  réseau, passerelle). Est-ce que ce sont les mêmes que précédemment?
-
----
-
-### C2 — Relâcher une configuration DHCP
-1. Libérez l’adresse DHCP.
-2. Vérifiez que l’adresse IP a été retirée. 
-
----
-
-### C3 — Renouveler une configuration DHCP
-1. Renouvelez la configuration DHCP.
-2. Vérifiez les paramètres IP qui vous ont été assignés (adresse,  réseau, passerelle). Est-ce que ce sont les mêmes que précédemment?
-
----
-
-## Partie D — Validation de la non‑persistance
+## Partie C — Validation de la non‑persistance
 
 1. Ajoutez une nouvelle adresse IP à votre interface.
 2. Redémarrez la machine.
@@ -191,8 +178,5 @@ En utilisant la commande apropriée, identifiez la passerelle par défaut de vot
 - Supprimer une IP :
   - `sudo ip address del <ip>/<masque> dev <interface>`
   - `sudo ip address flush dev <interface>`
-- DHCP :
-  - `sudo dhclient <interface>`
-  - `sudo dhclient -r <interface>`
-
+  
 ---

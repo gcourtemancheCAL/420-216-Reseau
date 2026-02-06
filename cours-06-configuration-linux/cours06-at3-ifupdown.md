@@ -1,6 +1,7 @@
 # Atelier formatif — Configuration IP avec `ifup`/`ifdown`
 
 ## Objectif général
+
 Mettre en pratique la configuration réseau **persistante** sous Debian à l’aide de `ifup`, `ifdown` et du fichier `/etc/network/interfaces`
 
 Cet atelier peut être réalisé seul ou en groupe. 
@@ -11,6 +12,7 @@ Cet atelier peut être réalisé seul ou en groupe.
 - Être capable de définir la configuration statique et dynamique d'une interface dans le fichier `interfaces`
 - Être capable d'utiliser les commandes `ifup` et `ifdown` afin de recharger la configuration d'une interface.
 - Comprendre le modèle logique maintenu par les commandes `ifup` et `ifdown`
+- 
 ## Mise en place
 
 *N.b. Cet atelier peut être réalisé immédiatement suivant l'atelier 1 - redémarrer l'ordinateur devrait vous mettre dans l'état initial attendu.*
@@ -63,11 +65,12 @@ iface enp0s3 inet static
     address 192.168.100.101/24
     gateway 192.168.100.1
 ```
+
 ### B2 — Configuration DNS
 
 1. Essayez de rejoindre le `www.google.com` avec `ping`.
 2. Qu'est-ce qui se passe? Pourquoi?
-3. Corrigez la situation en configurant le serveur DNS de Cloudflare (1.1.1.1) dans le fichier aproprié.
+3. Corrigez la situation en configurant le serveur DNS de Cloudflare (1.1.1.1) dans le fichier `/etc/resolv.conf`.
 
 ### B3 - Modifier le fichier pour DHCP
 1. Désactivez votre interface à l'aide la commande `ifdown`
@@ -123,6 +126,7 @@ iface enp0s3 inet static
 *Plusieurs nuances et subtilités sont impliquées à ce niveau. La configuration d'interfaces par défaut va préconiser l'utilisation de `allow-hotplug`.*
 
 *Les deux options jouent un rôle similaire alors nous allons vouloir éviter de les combiner sur une même interface afin d'éviter les conflits étranges.*
+
 ### C1 — Comprendre `auto`
 1. Assurez-vous que l’interface est définie avec `auto`.
 2. Redémarrez la machine.

@@ -163,56 +163,12 @@ sudo ip address del 192.168.1.100/24 dev eno1
 sudo ip address flush dev eno1
 ```
 
-# La commande `dhclient`
-
-`dhclient` est le client DHCP (Dynamic Host Configuration Protocol) qui permet d'obtenir automatiquement une configuration IP depuis un serveur DHCP.
-
-## Acquérir une configuration DHCP
-
-Pour demander une configuration DHCP sur une interface :
-
-```bash
-sudo dhclient eno1
-```
-
-**Mode verbose (pour le débogage) :**
-```bash
-sudo dhclient -v eno1
-```
-
-**Sans interface spécifiée, dhclient agit sur toutes les interfaces :**
-```bash
-sudo dhclient
-```
-
-## Relâcher une configuration DHCP
-
-Pour libérer l'adresse IP obtenue par DHCP :
-
-```bash
-sudo dhclient -r eno1
-```
-
-**Ce que fait la commande :**
-- Envoie un message DHCP RELEASE au serveur
-- Supprime l'adresse IP de l'interface
-- Permet au serveur de réattribuer l'adresse à un autre client
-
-## Renouveler une configuration DHCP
-
-Pour renouveler le bail DHCP existant :
-
-```bash
-sudo dhclient -r eno1
-sudo dhclient eno1
-```
 # Important : Persistence des manipulations
 
-**ATTENTION : Les modifications effectuées avec les commandes `ip` et `dhclient` ne sont PAS persistantes !**
+**ATTENTION : Les modifications effectuées avec les commandes `ip` ne sont PAS persistantes !**
 
 **Ce que cela signifie :**
 - Les paramètres IP modifiés avec `ip address add/del` sont perdus au redémarrage
-- La configuration obtenue avec `dhclient` ne sera pas automatiquement réappliquée
 - Toutes les modifications sont temporaires et n'existent que dans l'exécution actuelle du système
 
 **Pourquoi ce comportement ?**
