@@ -138,18 +138,6 @@ Une interface peut avoir plusieurs adresses IP :
 sudo ip address add 192.168.1.101/24 dev eno1
 ```
 
-### Remplacer l'adresse IP
-
-Pour remplacer complètement l'adresse IP existante :
-
-```bash
-sudo ip address replace 192.168.1.150/24 dev eno1
-```
-
-**Différence entre `add` et `replace` :**
-- `add` : ajoute une adresse (l'ancienne reste)
-- `replace` : remplace si elle existe, sinon ajoute
-
 ### Retirer une adresse IP
 
 Pour supprimer une adresse IP spécifique :

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cours-09/cours09-ex2-arp.md",
+                "file": "cours-06-configuration-linux/cours06-at1-ip-et-dhclient.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "cours09-ex2-arp"
+              "title": "cours06-at1-ip-et-dhclient"
             }
           }
         ]
@@ -185,8 +185,20 @@
   },
   "active": "62eeda9c58b8667b",
   "lastOpenFiles": [
-    "cours-09/cours09-ex1-ping-traceroute.md",
+    "cours-06-configuration-linux/cours06-03-ifupdown.md",
+    "cours-06-configuration-linux/cours06-01-commande-ip.md",
+    "cours-06-configuration-linux/cours06-at1-ip-et-dhclient.md",
+    "cours-06-configuration-linux/cours06-at3-ifupdown.md",
+    "cours-06-configuration-linux/cours06-at2-dhcpcd.md",
+    "cours-06-configuration-linux/cours06-02-dhcpcd.md",
+    "cours-07/cours07-at-integrateur.md",
+    "cours-10/cours10-03-socket-et-port.md",
+    "cours-10/cours10-02-tcp.md",
+    "cours-10/cours10-01-udp.md",
+    "cours-08/TP1.md",
+    "cours-10",
     "cours-09/cours09-ex2-arp.md",
+    "cours-09/cours09-ex1-ping-traceroute.md",
     "cours-09/cours09-02-ip.md",
     "cours-09/cours09-03-icmp.md",
     "cours-09/cours09-04-arp.md",
@@ -194,18 +206,10 @@
     "cours-09/cours09-04-arp-DESKTOP-EUOGI6H.md",
     "cours-09/img/Pasted image 20260209113933.png",
     "cours-09/img/Pasted image 20260209111200.png",
-    "cours-06-configuration-linux/cours06-01-commande-ip.md",
-    "cours-06-configuration-linux/cours06-02-dhcpcd.md",
-    "cours-06-configuration-linux/cours06-03-ifupdown.md",
-    "cours-06-configuration-linux/cours06-at1-ip-et-dhclient.md",
-    "cours-06-configuration-linux/cours06-at2-dhcpcd.md",
-    "cours-06-configuration-linux/cours06-at3-ifupdown.md",
     "cours-09/img",
-    "cours-08/TP1.md",
     "cours-09",
     "cours-03-parametres-ip/cours03-01-adapteurs-intf.md",
     "cours-08",
-    "cours-07/cours07-at-integrateur.md",
     "cours-05-domaine/cours05-04-prep-prochain-cours.md",
     "cours-05-domaine/cours05-03-exercices-domaines-urls.md",
     "cours-04-masque-reseau/cours04-ex-config-windows.md",
@@ -214,9 +218,6 @@
     "cours-06-configuration-linux/cours06-03-dhcpcd.md",
     "cours-06-configuration-linux/cours06-02-ifupdown.md",
     "cours-06-configuration-linux/img/Pasted image 20260202092105.png",
-    "cours-05-domaine/cours05-01-nom-hote-domaine.md",
-    "cours-05-domaine/cours05-02-url.md",
-    "cours-03-parametres-ip/cours03-05-topologie.md",
     "cours-04-masque-reseau/img/Pasted image 20260204100719.png",
     "cours-04-masque-reseau/img/Pasted image 20260204100621.png",
     "cours-04-masque-reseau/img/Pasted image 20260204100556.png",
@@ -229,7 +230,6 @@
     "cours-06-configuration-linux/img",
     "cours-06-configuration-linux/Untitled",
     "cours-06-configuration-linux",
-    "cours-01-introduction-reseau/plan-de-cours.pdf",
-    "cours-01-introduction-reseau/420-216-AL- H26-GCourtemanche.pdf"
+    "cours-01-introduction-reseau/plan-de-cours.pdf"
   ]
 }

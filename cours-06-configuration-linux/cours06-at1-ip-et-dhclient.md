@@ -129,6 +129,7 @@ En utilisant la commande apropriée, identifiez la passerelle par défaut de vot
 
 ### B5 — Remplacer l’adresse IP principale
 1. Remplacez l’adresse IP principale par une autre adresse valide du même sous-réseau.
+	1. Vous aller devoir le faire en 2 étapes
 2. Vérifiez le changement.
 3. **Testez la connectivité** vers la passerelle (ping).
 
