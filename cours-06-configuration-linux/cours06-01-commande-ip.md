@@ -104,7 +104,6 @@ sudo ip route add default via 192.168.18.1
 **Remplacer la route par défaut :**
 
 ```bash
-# NB : Ne va pas fonctionner si une route par défaut existe déjà
 sudo ip route replace default via 192.168.18.1
 ```
 
@@ -113,11 +112,15 @@ sudo ip route replace default via 192.168.18.1
 **Activer une interface :**
 ```bash
 sudo ip link set eno1 up
+# ou plus explicitement
+sudo ip link set up dev eno1
 ```
 
 **Désactiver une interface :**
 ```bash
 sudo ip link set eno1 down
+# ou plus explicitement
+sudo ip link set down dev eno1
 ```
 
 **Note :** Ces commandes nécessitent les privilèges root (d'où l'utilisation de `sudo`).

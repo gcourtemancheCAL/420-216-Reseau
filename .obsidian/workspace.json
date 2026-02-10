@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cours-06-configuration-linux/cours06-at1-ip-et-dhclient.md",
+                "file": "cours-06-configuration-linux/cours06-01-commande-ip.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "cours06-at1-ip-et-dhclient"
+              "title": "cours06-01-commande-ip"
             }
           }
         ]
@@ -185,12 +185,13 @@
   },
   "active": "62eeda9c58b8667b",
   "lastOpenFiles": [
+    "cours-04-masque-reseau/cours04-ex-config-windows.md",
     "cours-06-configuration-linux/cours06-03-ifupdown.md",
+    "cours-06-configuration-linux/cours06-02-dhcpcd.md",
     "cours-06-configuration-linux/cours06-01-commande-ip.md",
     "cours-06-configuration-linux/cours06-at1-ip-et-dhclient.md",
     "cours-06-configuration-linux/cours06-at3-ifupdown.md",
     "cours-06-configuration-linux/cours06-at2-dhcpcd.md",
-    "cours-06-configuration-linux/cours06-02-dhcpcd.md",
     "cours-07/cours07-at-integrateur.md",
     "cours-10/cours10-03-socket-et-port.md",
     "cours-10/cours10-02-tcp.md",
@@ -212,7 +213,6 @@
     "cours-08",
     "cours-05-domaine/cours05-04-prep-prochain-cours.md",
     "cours-05-domaine/cours05-03-exercices-domaines-urls.md",
-    "cours-04-masque-reseau/cours04-ex-config-windows.md",
     "cours-04-masque-reseau/cours04-03-configuration-ip-windows.md",
     "cours-04-masque-reseau/cours04-04-configuration-du-parefeu.md",
     "cours-06-configuration-linux/cours06-03-dhcpcd.md",
