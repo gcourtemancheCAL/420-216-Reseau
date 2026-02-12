@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cours-06-configuration-linux/cours06-at1-ip-et-dhclient.md",
+                "file": "cours-06-configuration-linux/cours06-at3-ifupdown.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "cours06-at1-ip-et-dhclient"
+              "title": "cours06-at3-ifupdown"
             }
           }
         ]
@@ -185,10 +185,13 @@
   },
   "active": "0ff7501472f4058a",
   "lastOpenFiles": [
+    "cours-07/cours07-at-integrateur.md",
+    "cours-06-configuration-linux/cours06-at1-ip-et-dhclient.md",
+    "cours-05-domaine/cours05-03-exercices-domaines-urls.md",
+    "cours-05-domaine/cours05-04-prep-prochain-cours.md",
     "cours-06-configuration-linux/cours06-03-ifupdown.md",
     "cours-06-configuration-linux/cours06-02-dhcpcd.md",
     "cours-06-configuration-linux/cours06-01-commande-ip.md",
-    "cours-06-configuration-linux/cours06-at1-ip-et-dhclient.md",
     "cours-06-configuration-linux/cours06-at2-dhcpcd.md",
     "cours-11-services-1/cours11-05-services.md",
     "cours-11/cours11-05-services.md",
@@ -224,9 +227,6 @@
     "cours-08-tp1/TP1.md",
     "cours-08-tp1",
     "cours-11/cours11-04-mdns.md",
-    "cours11-04-mdns.md",
-    "cours-11/cours11-03-ftp.md",
-    "cours11-03-ftp.md",
     "cours-11",
     "Untitled",
     "cours-10/img",

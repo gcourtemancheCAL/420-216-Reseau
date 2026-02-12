@@ -121,6 +121,8 @@ iface enp0s3 inet static
 
 ## Partie C — Auto vs allow-hotplug
 
+**NB : Je ne suis pas super satisfait des exercices ici. Libre à vous de les sauter. Je conseillerais quand même de lire le paragraphe suivant qui explique la différence entre `auto` et `allow-hotplug`**
+
 ***N.B** : `auto` et  `allow-hotplug` vont tout deux faire en sorte que la configuration est appliquée au démarrage de l'ordinateur. La principale différence est que `allow-hotplug` est réactif au statut de connexion de l'interface, tandis que `auto` va forcer les paramètres au démarrage.* 
 
 *Plusieurs nuances et subtilités sont impliquées à ce niveau. La configuration d'interfaces par défaut va préconiser l'utilisation de `allow-hotplug`.*
@@ -155,7 +157,7 @@ iface enp0s3 inet static
 ---
 
 ### E2 — Forcer la réactivation
-1. Utilisez `ifup --force` pour corriger la situation.
+1. Utilisez `ifdown --force <intf>` suivi de `ifup --force <intf>` pour corriger la situation.
 2. Vérifiez l’état final.
 
 
