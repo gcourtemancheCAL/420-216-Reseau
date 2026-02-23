@@ -20,18 +20,9 @@ Telnet (Telecommunication Network) est un protocole d'application permettant l'�
 
 **Faiblesses:**
 - Aucun chiffrement : toutes les données, y compris les mots de passe, sont transmises en texte clair
-- Vulnérable aux attaques par interception (man-in-the-middle)
-- Pas d'authentification forte
-- Obsolète pour les connexions sécurisées
-- Non recommandé pour les réseaux publics ou non sécurisés
+- Vulnérable aux attaques man-in-the-middle
+- Non recommandé pour la majorité des situations.
 
-## Cas d'utilisations
-
-- **Administration de serveurs** (environnements isolés ou réseaux privés sécurisés uniquement)
-- **Test de connectivité** vers des services réseau (HTTP, SMTP, etc.)
-- **Débogage** de protocoles en mode texte
-- **Accès à des équipements réseau** anciens ne supportant pas SSH
-- **Accès à des BBS (Bulletin Board Systems)** ou systèmes hérités
-- **Environnement d'apprentissage** pour comprendre les protocoles réseau
+Telnet est principalement utilisé pour permettre un accès point à point avec certains équipements particulier. Dans ce contexte, la simplicité du protocole est un avantage prépondérant, et la sécurité de l'échange n'est plus considérable.
 
 **Note:** Pour les connexions sécurisées, SSH (Secure Shell) a largement remplacé Telnet dans les environnements modernes.

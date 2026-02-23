@@ -8,6 +8,25 @@ FTP (File Transfer Protocol) est un protocole standard de transfert de fichiers 
 
 **Port:** 21 (contrôle), 20 (données en mode actif)
 
+## Mode actif et passif
+
+### Mode actif
+
+1. Le client se connecte au port de contrôle du serveur (21) à partir d'un port aléatoire.
+2. Le client ftp envoie une commande `PORT` au serveur, indiquant sur quel port se connecté pour effectuer le transfert de données.
+3. Le serveur crée un nouvelle connexion avec le client en se connectant au port qui lui a été fourni à partir de son port 20.
+
+Le mode actif peine à traverser les pare-feu et les NATs.
+
+### Mode passif
+
+1. Le client se connecte au port de contrôle du serveur (21) à partir d'un port aléatoire.
+2. Le client ftp envoie une commande `PASV` au serveur. 
+3. Le serveur répond avec un port sur lequel établir la connexion de données
+4. Le client se connecte à ce port.
+
+Comme le client initie la connexion pour le transfert de données, ce mode fonctionne mieux pour traverser les pare-feu et les NATs.
+
 ## Forces et faiblesses
 
 **Forces:**
@@ -16,28 +35,20 @@ FTP (File Transfer Protocol) est un protocole standard de transfert de fichiers 
 - Permet la reprise de transferts interrompus
 - Navigation dans les répertoires distants
 - Gestion complète des fichiers (renommer, supprimer, etc.)
-- Deux modes de transfert : ASCII et binaire
-- Modes actif et passif pour contourner les pare-feu
-- Largement supporté par tous les systèmes d'exploitation
 
 **Faiblesses:**
 - Aucun chiffrement par défaut (FTP standard)
 - Authentification en texte clair (nom d'utilisateur et mot de passe)
 - Complexité de configuration avec les pare-feu (deux connexions)
-- Vulnérable aux attaques par interception
-- Pas adapté aux réseaux non sécurisés
 - Mode actif peut poser problème avec NAT
+- Spécifications très vague, complexe et contradictoire
 
-**Note:** FTPS (FTP Secure) et SFTP (SSH File Transfer Protocol) sont des alternatives sécurisées.
+**Note:** FTPS (FTP Secure) et SFTP (SSH File Transfer Protocol) sont des alternatives sécurisées. SFTP a principalement remplacé FTP et FTPS.
 
 ## Cas d'utilisations
 
-- **Hébergement web** : transfert de fichiers vers des serveurs web
 - **Partage de fichiers volumineux** au sein d'une organisation
-- **Sauvegarde de données** vers des serveurs distants
 - **Distribution de logiciels** et de mises à jour
 - **Transfert de fichiers entre serveurs**
 - **Archives publiques** de fichiers (miroirs de logiciels)
-- **Gestion de contenu** pour les sites web
 - **Transfert automatisé** de fichiers entre systèmes (scripts)
-- **Synchronisation de données** entre sites distants

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cours-10-protocoles/cours10-ex1-ping-traceroute.md",
+                "file": "cours-11-services-1/cours11-ex-installation-services.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "cours10-ex1-ping-traceroute"
+              "title": "cours11-ex-installation-services"
             }
           }
         ]
@@ -185,6 +185,12 @@
   },
   "active": "0ff7501472f4058a",
   "lastOpenFiles": [
+    "cours-11-services-1/cours11-05-services.md",
+    "cours-11-services-1/cours11-04-mdns.md",
+    "cours-11-services-1/cours11-03-ftp.md",
+    "cours-11-services-1/cours11-02-tftp.md",
+    "cours-11-services-1/cours11-01-telnet.md",
+    "cours-10-protocoles/cours10-ex1-ping-traceroute.md",
     "cours-10-protocoles/cours10-08-socket-et-port.md",
     "cours-10-protocoles/cours10-ex2-arp.md",
     "cours-10-protocoles/cours10-05-arp.md",
@@ -194,7 +200,6 @@
     "cours-10-protocoles/cours10-01-ethernet.md",
     "cours-10-protocoles/cours10-07-tcp.md",
     "cours-10-protocoles/cours10-06-udp.md",
-    "cours-10-protocoles/cours10-ex1-ping-traceroute.md",
     "cours-10-protocoles/cours10-ex3-netstat.md",
     "cours-10-protocoles/img/Pasted image 20260211090059.png",
     "cours-05-domaine/cours05-03-exercices-domaines-urls.md",
@@ -202,11 +207,6 @@
     "cours-04-masque-reseau/cours04-ex-config-windows.md",
     "cours-03-parametres-ip/cours03-ex1-manufacturier.md",
     "cours-11-services-1/cours11-ex-installation-services.md",
-    "cours-11-services-1/cours11-01-telnet.md",
-    "cours-11-services-1/cours11-05-services.md",
-    "cours-11-services-1/cours11-04-mdns.md",
-    "cours-11-services-1/cours11-03-ftp.md",
-    "cours-11-services-1/cours11-02-tftp.md",
     "cours-06-configuration-linux/cours06-at1-ip-et-dhclient.md",
     "cours-06-configuration-linux/cours06-01-commande-ip.md",
     "cours-07/cours07-at-integrateur.md",
