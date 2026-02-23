@@ -2,18 +2,16 @@
 
 ## Objectifs
 - Comprendre le fonctionnement du protocole ARP
-- Afficher la cache ARP
-- Visualiser les trames ARP à la découverte
-- Analyser les adresses multicast et les entrées statiques
-- Identifier les risques de sécurité (ARP spoofing)
+- Afficher la cache ARP et comprendre la cache ARP
+- Établir le lien entre l'adresse IP et la trame Ethernet
 
 ---
 
-## Exercice 1: Exploration du cache ARP
+## Exercice 1: Exploration de la cache ARP
 
-### Partie A: Afficher le cache ARP
+### Partie A: Afficher la cache ARP
 
-1. **Afficher le cache actuel:**
+1. **Afficher la cache actuel:**
 
    **Windows:**
    ```cmd
@@ -57,7 +55,7 @@
    ```
 
 5. **Regénérer les entrées:**
-   - Pinguez votre passerelle:
+   - Pingez votre passerelle:
      ```
      ping 192.168.1.1        # (remplacer par votre passerelle)
      ```
@@ -68,13 +66,13 @@
      ```
    - Nouvelle entrée pour la passerelle? Elle est marquée "REACHABLE" (Linux) ou "dynamic" (Windows)
 
-5. **Pinguez un hôte:**
+5. **Pingez un hôte:**
    - Sur Linux : 
 	   - Vider la cache ARP
 	   - Rejoignez l'adresse IP de votre système Windows avec ping.
 	   - Affichez la cache ARP. Que remarquez-vous?
 	   
-5. **Pinguez un hôte inexistant:**
+5. **Pingez un hôte inexistant:**
    - Sur Linux : 
 	   - Vider la cache ARP
 	   - Utilisez ping pour essayer de rejoindre un hôte inexistant.
@@ -82,7 +80,7 @@
 
 ### Partie B: Comprendre les requêtes ARP
 
-7. **Broadcast vs Unicast:**
+8. **Broadcast vs Unicast:**
    - Avant de pinger une adresse inconnue dans votre réseau local, quel type de trame Ethernet est envoyé?
 
 ---

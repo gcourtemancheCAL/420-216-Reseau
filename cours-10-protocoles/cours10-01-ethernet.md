@@ -34,7 +34,7 @@ Le CRC est calculé par l'emetteur sur le contenu de la trame. Le recepteur reca
 
 L'algorithme de CRC se base sur la division modulo-2 via l'application succésive de XOR. Le principe est extrêmement simple à implémenter au niveau hardware et peut être fait *inline* sans réellement ajouté de latence.
 
- [Visualisation en ligne](https://www.youtube.com/watch?v=iwj8ZgyzqZk)
+[Visualisation en ligne](https://www.youtube.com/watch?v=iwj8ZgyzqZk)
 
 [Exemple](https://en.wikipedia.org/wiki/Cyclic_redundancy_check#Computation)
 

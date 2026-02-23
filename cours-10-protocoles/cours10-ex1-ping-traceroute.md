@@ -20,7 +20,7 @@
    - À quel niveau de la pile OSI/quel protocole se situe cette information?
 
 2. **Pinger la passerelle par défaut:**
-   - Identifiez votre passerelle par défaut (commande: 
+   - Identifiez votre passerelle par défaut 
    - Pingez-la
    - Identifiez le TTL.
 
@@ -31,9 +31,11 @@
    - Le serveur répond-il? Quel est le temps de réponse moyen?
 
 **Questions**
-1. À quoi correspond exactement le TTL dans les réponse reçu? Est-ce celui que vous avez envoyé à l'origine?
-2. Estimez le TTL initial pour chacune des réponses reçues.
-3. Quel type de message ICMP avez vous envoyé avec ping? Quel type de réponse?
+1. Est-ce que le TTL a change selon l'hôte que vous avez contacté? Pourquoi?
+2. À quoi correspond exactement le TTL dans les réponse reçu? Est-ce celui que vous avez envoyé à l'origine?
+3. L'argument `-t` vous permet de spécifier le TTL à l'envoie. Testez avec un TTL de 64.
+4. Estimez le TTL initial pour chacune des réponses reçues.
+5. Quel type de message ICMP avez vous envoyé avec ping? Quel type de réponse?
 
 ### Partie B: Questions sur le broadcast
 
@@ -42,7 +44,7 @@
    - Calculez l'adresse de diffusion.
    - Selon-vous, qu'est-ce qui devrait arriver si l'on tentait de rejoindre cette adresse avec ping?
 
-**NB** : Vous pouvez tester la commande et observer le résultat. Il est fort probable, cependant, [que le routeur bloque les paquets ICMP par mesure de sécurité](https://en.wikipedia.org/wiki/Smurf_attack).
+**NB** : Vous pouvez tester la commande et observer le résultat. Il est fort probable, cependant, [que les paquets ICMP broadcasté soient bloqués par mesure de sécurité](https://en.wikipedia.org/wiki/Smurf_attack).
 
 ---
 
