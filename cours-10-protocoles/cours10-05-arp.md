@@ -1,5 +1,7 @@
 # ARP
 
+## IMPORTANT : On va couvrir ça après l'intra
+
 ## Description et rôle de ARP
 
 ARP (Address Resolution Protocol) est un protocole de la couche 2/3 qui résout les adresses IP en adresses MAC dans un domaine de diffusion local.

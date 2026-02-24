@@ -6,6 +6,10 @@ ICMP (Internet Control Message Protocol) est un protocole utilitaire de la couch
 
 ICMP est encapsulé dans les paquets IP (protocole IP numéro 1).
 
+<img src="img/ICMP-Packet-Format.png" width="800" />
+
+[Types et codes](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Control_messages)
+
 ## Notifications d'erreurs
 
 ICMP est principalement utilisé pour signaler des conditions d'erreur lors de l'acheminement des paquets.
