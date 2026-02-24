@@ -40,7 +40,7 @@ L'adresse IP source permet au récipiendaire d'identifier l'hôte vers lequel en
 
 La MTU (Maximum Transmission Unit) est la taille maximale de charge utile que le lien peut transporter. Si un paquet IP est plus grand que la MTU et que la fragmentation est permise, il est fragmenté en plusieurs paquets. Le réassemblage se fait uniquement à la destination.
 
-Un paquet IP ne peut pas être plus gros que ce que peut contenir une trame Ethernet. Le MTU est donc une contrainte héritée de la couche li
+Un paquet IP ne peut pas être plus gros que ce que peut contenir une trame Ethernet. Le MTU est donc une contrainte héritée de la couche liaison.
 
 ## Modes d'adressage
 
