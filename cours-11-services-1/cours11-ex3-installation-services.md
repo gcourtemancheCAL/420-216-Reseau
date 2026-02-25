@@ -15,7 +15,7 @@
 - Une machine Windows avec accès au réseau
 - Putty (pour Telnet) - [Lien de téléchargement](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 - WinSCP (pour FTP) - [Lien de téléchargement](https://winscp.net/eng/download.php)
-- Certaines commandes vont necéssiter les accès privilégiés. Connectez-vous avez root ou assurez-vous d'avoir accès à sudo.
+- Certaines commandes vont necéssiter les accès privilégiés. Connectez-vous avec root ou assurez-vous d'avoir accès à sudo.
 
 ---
 

@@ -8,15 +8,26 @@
 - Valider avec la commande `ss`
 - Gérer le service avec systemctl
 - Désactiver la connexion root et tester l'authentification
+- Tester la configuration d'adresse d'écoute
 
 ---
 
 ## Prérequis
-- Une machine virtuelle Linux (Ubuntu/Debian)
+- Un système Linux (Ubuntu/Debian)
 - Une machine Windows avec accès au réseau
 - PuTTY (pour SSH) - [Lien de téléchargement](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 - WinSCP (pour SFTP) - [Lien de téléchargement](https://winscp.net/eng/download.php)
 - Certaines commandes vont nécessiter les accès privilégiés. Connectez-vous avec root ou assurez-vous d'avoir accès à sudo.
+
+### En classe
+
+En classe l'atelier va être réalisé sur une machine physique dans laquelle une seconde carte réseau sera installé.
+
+Les paramètres de configurations IP vous seront donner.
+
+### À la maison
+
+Une seconde carte réseau peut être ajoutée à la machine virtuelle. Vous pouvez paramétrer vos interfaces via DHCP.
 
 ---
 
@@ -43,15 +54,6 @@
 4. **Utilisez la commande `ss` pour identifier si le service SSH est actif:**
    
    SSH est un protocole applicatif utilisant *tcp* comme transport, et qui *écoute* sur le *port 22* par défaut.
-   
-   ```bash
-   ss -tlnp | grep ssh
-   ```
-   
-   Vous devriez voir une ligne similaire à:
-   ```
-   LISTEN    0      128          0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=XXXX,fd=3))
-   ```
 
 ### Partie B: Test de connexion depuis Windows
 
@@ -61,7 +63,9 @@
    - Connection type: SSH
    - Cliquez sur "Open"
 
-6. **Se connecter à votre serveur Linux:**
+<img src="img/Pasted image 20260225090142.png" width="800" />
+
+5. **Se connecter à votre serveur Linux:**
    - Acceptez la clé d'hôte si c'est la première connexion
    - Saisissez votre nom d'utilisateur Linux
    - Saisissez votre mot de passe
@@ -90,16 +94,9 @@
 9. **Effectuez un transfert de fichier:**
    - Transférez un fichier de votre système Windows vers Linux
    - Validez que le fichier a bien été transféré sur le serveur Linux
-   
-   ```bash
-   ls -la ~
-   ```
 
 10. **Transférez un fichier depuis le serveur vers Windows:**
-    - Créez un fichier de test sur Linux
-      ```bash
-      echo "Contenu du fichier de test" > ~/fichier-test.txt
-      ```
+    - Créez un fichier de test sur Linux. Ajoutez y le contenu de vos rêves.
     - Téléchargez-le via SFTP dans WinSCP
 
 ---
@@ -109,14 +106,15 @@
 ### Partie A: Modifier le port d'écoute
 
 11. **Modifier le fichier de configuration SSH:**
-    ```bash
-    sudo nano /etc/ssh/sshd_config
-    ```
-    
-    Cherchez et modifiez la ligne `#Port 22` (elle est commentée) en:
-    ```
-    Port 2222
-    ```
+```bash
+sudo nano /etc/ssh/sshd_config
+```
+
+  Cherchez et modifiez la ligne `#Port 22` (elle est commentée) en:
+  
+```
+Port 2222
+```
 
 12. **Redémarrez le service SSH:**
     ```bash
@@ -137,42 +135,61 @@
     - Connection type: SSH
     - Connectez-vous
 
+15. **Testez la connexion l'ancien port:**
+    - Lancez PuTTY
+    - Host Name: Adresse IP de votre serveur
+    - Port: 22
+    - Connection type: SSH
+
+
 ### Partie B: Modifier l'adresse d'écoute
 
 15. **Modifier le fichier de configuration SSH à nouveau:**
-    ```bash
-    sudo nano /etc/ssh/sshd_config
-    ```
-    
-    Cherchez et modifiez la ligne ou ajoutez `#Port 2222` en:
-    ```
-    #Port 2222
-    Port 22
-    ListenAddress 127.0.0.1
-    ```
+ ```bash
+ sudo nano /etc/ssh/sshd_config
+ ```
+
+Changez la configuration de port et remettez la à sa valeur par défaut.
+
+Changez l'adresse d'écoute pour le 127.0.0.1.
+
+```
+Port 22
+ListenAddress 127.0.0.1
+```
 
 16. **Redémarrez le service SSH:**
-    ```bash
-    sudo systemctl restart ssh
-    ```
+```bash
+sudo systemctl restart ssh
+```
 
 17. **Validez avec `ss`:**
-    ```bash
-    ss -tlnp | grep ssh
-    ```
-    
-    Le service devrait maintenant écouter uniquement sur 127.0.0.1 (localhost).
+```bash
+ss -tlnp | grep ssh
+```
+  
+Le service devrait maintenant écouter uniquement sur 127.0.0.1 (localhost).
+
+17. **Essayez de vous connecter à vous-même à partir du système linux.
+
+```bash
+    ssh nomutilisateur@127.0.0.1
+```
+
+**Question:** Est-ce que ça fonctionne?
+
+Et si vous utilisez l'adresse IP de l'une de vos interface ethernet?
+
+**Pourquoi?**
 
 18. **Essayez de vous connecter depuis Windows au port 22:**
-    - Est-ce que ça fonctionne? Qu'est-ce qui vous en empêche?
-    - Pourquoi?
+    - Testez avec l'adresse de loopback. Est-ce que ça fonctionne? Pourquoi?
+    - Testez avec l'adresse des deux interfaces ethernet. Est-ce que ça fonctionne? Pourquoi?
 
-19. **Modifier l'adresse d'écoute à votre adresse IP:**
-    ```bash
-    sudo nano /etc/ssh/sshd_config
-    ```
-    
-    Remplacez `ListenAddress 127.0.0.1` par `ListenAddress 192.168.x.x` (votre adresse IP réelle)
+19. **Modifier l'adresse d'écoute pour l'adresse ip de l'une de vos interface ethernet:**
+	- N'oubliez pas de redémarrer le service!
+	- Testez la connexion en local sur l'adresse de loopback ainsi que les adresses de vos 2 interfaces. Que remarquez-vous?
+	- Essayez de vous connecter à partir de Windows en utilisant l'adresse 
 
 20. **Redémarrez et validez:**
     ```bash
@@ -181,9 +198,7 @@
     ```
 
 21. **Testez la connexion depuis Windows:**
-    - Lancez PuTTY avec votre adresse IP
-    - Port: 22
-    - Est-ce que ça fonctionne?
+    - Testez avec les deux interfaces. Seulement l'une d'entre elle devrait fonctionner.
 
 22. **Rétablir la configuration par défaut:**
     ```bash
@@ -232,40 +247,33 @@
 
 ## Exercice 5: Sécurité - Désactiver la connexion root
 
-### Partie A: Désactiver la connexion SSH pour root
+### Partie A: Connexion SSH pour root
 
-26. **Modifier le fichier de configuration SSH:**
+26. **Essayez de vous connecter via ssh avec l'utilisateur root:**
+	1. Le test peut être fait avec putty ou sur linux directement.
+	2. Vous ne devriez pas être en mesure de le faire.
+
+27. **Modifier le fichier de configuration SSH:**
     ```bash
     sudo nano /etc/ssh/sshd_config
     ```
     
-    Cherchez la ligne `#PermitRootLogin yes` et remplacez-la par:
+    Cherchez la ligne `#PermitRootLogin` et remplacez-la par:
     ```
-    PermitRootLogin no
+    PermitRootLogin yes
     ```
 
-27. **Redémarrez le service SSH:**
+28. **Redémarrez le service SSH:**
     ```bash
     sudo systemctl restart ssh
     ```
 
-28. **Testez la restriction:**
+29. **Testez de nouveau:**
     - Depuis Windows, essayez de vous connecter en tant que `root` avec SSH
-    - Vous devriez obtenir un message d'erreur de connexion refusée
+    - Ça devrait fonctionner cette fois-ci.
 
-29. **Confirmez que vous pouvez toujours vous connecter avec un utilisateur normal:**
-    - Connectez-vous avec votre utilisateur habituel (pas root)
-    - Vous devriez pouvoir utiliser `sudo` pour les opérations administratives
+Par mesure de sécurité, il est normalement fortement recommandé de désactiver la connexion root via ssh.
+
+Modifier donc la configuration pour le désactiver.
 
 ---
-
-## Questions de révision
-
-1. Quels sont les avantages de SSH par rapport à Telnet?
-2. Comment pouvez-vous identifier quel service écoute sur quel port avec `ss`?
-3. Pourquoi est-il important de pouvoir modifier le port d'écoute d'un service?
-4. Qu'est-ce que ListenAddress 127.0.0.1 signifie et pourquoi serait-ce utile?
-5. Pourquoi est-il recommandé de désactiver la connexion root via SSH?
-6. Quelle est la différence entre `sudo systemctl restart` et `sudo systemctl reload`?
-7. Comment SFTP améliore-t-il FTP en termes de sécurité?
-
