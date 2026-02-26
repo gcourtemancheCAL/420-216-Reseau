@@ -33,7 +33,7 @@
 **Questions**
 1. Est-ce que le TTL a change selon l'hôte que vous avez contacté? Pourquoi?
 2. À quoi correspond exactement le TTL dans les réponse reçu? Est-ce celui que vous avez envoyé à l'origine?
-3. L'argument `-t` vous permet de spécifier le TTL à l'envoie. Testez avec un TTL de 64.
+3. L'argument `-t` sur linux, ou `-i` sur Windows, vous permet de spécifier le TTL à l'envoie. Testez avec un TTL de 64.
 4. Estimez le TTL initial pour chacune des réponses reçues.
 5. Quel type de message ICMP avez vous envoyé avec ping? Quel type de réponse?
 
