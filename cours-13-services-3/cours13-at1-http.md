@@ -12,7 +12,6 @@
 
 ## Prérequis
 - Une machine virtuelle Linux (Ubuntu/Debian) avec adaptateur en mode "Bridged"
-- Configuration IP statique sur la VM Linux
 - Une machine Windows avec accès au réseau
 - Navigateur web (Firefox, Chrome, Edge, etc.)
 - Accès sudo ou root sur la machine Linux
@@ -60,8 +59,12 @@
 7. **Vérifiez les connexions TCP:**
    - Sur Linux, affichez les sockets TCP actifs en boucle:
      ```bash
-     for i in `seq 2000` ss -tn
-     # ctrl + c pour intérrompre
+     for i in `seq 2000` ; do ss -tn ; done
+     # ctrl + c pour intérrompre lorsque le 
+     # socket apparait. 
+     
+     # Alternative : 
+     for i in $(seq 2000) ; do ss -tn ; done
      ```
    - Rafraichissez la page sur Windows.
    - Vous devriez voir une connexion en état ESTAB éventuellement apparaitre correspondant à votre navigateur Windows
@@ -78,17 +81,19 @@
    ```
 
 9. **Créer une page HTML personnalisée:**
-Utilisez ChatGPT pour créer la page html de vos rêves. Il est impératif qu'elle soit parfait en tout point.
+Utilisez ChatGPT pour créer la page html de vos rêves. Il est impératif qu'elle soit parfaite en tout point.
 
-À l'aide de sftp, transféré cette page sur la machine linux. 
+À l'aide de sftp, transférez cette page sur la machine linux. 
 - Vous allez avoir besoin d'installer sshd.
 - Vous allez probablement avoir à faire le transfert en 2 étapes
-	- Transférer la page sur linux
-	- Déplacez la page dans /var/www/html
-
+	- Transférer les fichiers de la page sur linux avec votre compte utilisateur
+	- Déplacez les fichiers de la page dans `/var/www/html` avec le compte root
+- Les fichiers de la page web doivent être disponible en lecture par le service apache2 qui opère normalement sous l'utilisateur `www-data` et le groupe `www-data`. Assurez-vous donc que vos fichiers sont lisibles par les utilisateurs non propriétaires (`others`) 
+-
 10. **Vérifier que la page est bien accessible depuis Windows:**
     - Si la page se nomme index.html, vous n'avez qu'à vous connecter directement à votre serveur.
     - Sinon, vous aurez besoin d'entrer son nom dans l'URL.
+    - Le chemin de l'url va être converti en chemin relatif à partir du dossier `/var/www/html`
 
 ---
 
