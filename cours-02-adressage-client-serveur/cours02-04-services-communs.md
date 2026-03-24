@@ -146,7 +146,7 @@ Exemples :
 1. www.google.com
 2. www.youtube.com
 
-**Exemple de serveur DNS ** :
+**Exemple de serveur DNS** :
 - bind9
 
 Google offre des serveurs DNS publique au 8.8.8.8 et au 8.8.4.4
