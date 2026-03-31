@@ -32,7 +32,7 @@ Par équipe :
 
 ## Branchements initiaux
 
-- Branchez le commutateur à l'alimentation életrique. Il devrait démarrer de lui-même.
+- Branchez le commutateur à l'alimentation électrique. Il devrait démarrer de lui-même.
 - Ajoutez une carte Ethernet supplémentaire à votre système Linux.
 - Branchez vos équipements (par Ethernet) de sorte à reproduire la topologie suivante : 
 
@@ -70,7 +70,7 @@ Une fois la connexion au commutateur établie, entrez les commandes suivantes af
 
 ```
 enable
-write erase
+restore factory-default
 ```
 
 ### Validation
