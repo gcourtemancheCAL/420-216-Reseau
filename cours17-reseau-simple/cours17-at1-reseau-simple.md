@@ -26,7 +26,7 @@ Par équipe :
 - 1 système Debian
 - 1 câble console 
 - 1 adaptateur USB-série
-- 4 câbles Ethernet;
+- 5 câbles Ethernet;
 
 ---
 
