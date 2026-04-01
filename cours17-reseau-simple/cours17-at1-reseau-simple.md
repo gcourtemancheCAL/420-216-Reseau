@@ -48,7 +48,11 @@ Nous allons devoir commencer par identifier le réseau IP dans lequel nous allon
 
 Assignez des configurations IP statiques à vos deux systèmes en gardant en tête le consignes suivantes  :
 - Vous devez configurer *toutes* les interfaces connectées au commutateur.
+	- Cela inclut le système Windows ainsi que les deux interfaces du système Linux.
 - Chaque interface doit avoir une adresse IP différente
+- Aucune interface ne devrait avoir l'adresse réseau comme adresse IP
+	- i.e. si vous êtes dans le 10.0.100.0/24, aucun système ne devrait avoir le 10.0.100.0 comme adresse IP.
+	- Les adresses 10.0.100.1, 10.0.100.2, 10.0.100.3 et 10.0.100.4 seraient valides.
 - Normalement, la première adresse d'un réseau est réservée au routeur.
 - Assignez la passerelle immédiatement, même si elle n'existe pas encore.
 - Utilisez le `1.1.1.1` comme serveur DNS.
@@ -75,8 +79,7 @@ restore factory-default
 
 ### Validation
 
-Une fois le commutateur démarré, vous devriez être en mesure de `ping` les deux interfaces de votre système Linux à partir de votre système Windows.
-
+Une fois le commutateur démarré, vous devriez être en mesure de `ping` les deux interfaces de votre système Linux **à partir de votre système Windows.** 
 
 ## Configuration d'interfaces
 
@@ -114,7 +117,7 @@ Nous allons commencer en désactivant toutes les interfaces du commutateur. Entr
 
 #### Validation
 
-Vous ne devriez plus être en mesure de `ping` les deux interfaces de votre système Linux à partir de votre système Windows.
+Vous ne devriez plus être en mesure de `ping` les deux interfaces de votre système Linux **à partir de votre système Windows.**
 
 ### Activer les interfaces utilisées
 
@@ -132,7 +135,7 @@ Vous ne devriez plus être en mesure de `ping` les deux interfaces de votre syst
 
 #### Validation
 
-Vous devriez être en mesure de `ping` les deux interfaces de votre système Linux à partir de votre système Windows.
+Vous devriez être en mesure de `ping` les deux interfaces de votre système Linux **à partir de votre système Windows.
 
 ## Configuration initiale du routeur Cisco
 
