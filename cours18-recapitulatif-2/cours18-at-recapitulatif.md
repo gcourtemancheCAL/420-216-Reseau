@@ -40,7 +40,7 @@ Installez les services suivant sur le serveur linux :
 	- Changez l'adresse d'écoute pour le 192.168.X.102
 - apache2
 	- Changez l'adresse d'écoute pour les deux valeurs suivantes : 
-		- 127.0.0.1:80
+		- 127.0.0.1:8080
 		- 192.168.X.101:80
 - avahi-daemon
 	- Configurez le nom d'hôte mDNS suivants :
@@ -52,5 +52,5 @@ Installez les services suivant sur le serveur linux :
 À partir de votre système Windows :
 - Dans le dossier site-web, se trouve une page à transférer sur le système Linux.
 - Transférez la sur le système Linux à l'aide de sftp.
-- Effectuez les manipulations nécessaires afin que je puisse y accéder en utilisant l'url `http://web-VOTRENOM.local/cours18`
+- Effectuez les manipulations nécessaires afin que vous puissiez y accéder en utilisant l'url `http://web-VOTRENOM.local/cours18`
 
