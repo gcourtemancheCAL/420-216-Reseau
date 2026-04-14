@@ -43,20 +43,28 @@
 <h1>Outil de validation Réseau</h1>
 
 <div class="section">
-    <h2>1. Calcul adresse réseau</h2>
+    <h2>1. Calcul adresse réseau - CIDR</h2>
     <input id="addr1" placeholder="Adresse (e.g. 192.168.1.10)">
-    <input id="mask1" placeholder="Netmask (e.g. 255.255.255.0)">
-    <button onclick="computeNetwork()">Calcul</button>
+    <input id="cidr1" placeholder="Longueur de préfixe (e.g. 24)">
+    <button onclick="computeNetwork1()">Calcul</button>
     <div class="result" id="result1"></div>
 </div>
 
 <div class="section">
-    <h2>2. Adresse est dans le réseau?</h2>
-    <input id="net2" placeholder="Adresse réseau (e.g. 192.168.1.0)">
+    <h2>2. Calcul adresse réseau - Masque</h2>
+    <input id="addr2" placeholder="Adresse (e.g. 192.168.1.10)">
     <input id="mask2" placeholder="Netmask (e.g. 255.255.255.0)">
-    <input id="addr2" placeholder="Adresse hôte (e.g. 192.168.1.50)">
-    <button onclick="checkMembership()">Calcul</button>
+    <button onclick="computeNetwork2()">Calcul</button>
     <div class="result" id="result2"></div>
+</div>
+
+<div class="section">
+    <h2>3. Adresse est dans le réseau?</h2>
+    <input id="net3" placeholder="Adresse réseau (e.g. 192.168.1.0)">
+    <input id="mask3" placeholder="Netmask (e.g. 255.255.255.0)">
+    <input id="addr3" placeholder="Adresse hôte (e.g. 192.168.1.50)">
+    <button onclick="checkMembership()">Calcul</button>
+    <div class="result" id="result3"></div>
 </div>
 
 <script>
@@ -73,10 +81,11 @@ function intToIp(int) {
     ].join('.');
 }
 
-function computeNetwork() {
+function computeNetwork1() {
     try {
         let addr = ipToInt(document.getElementById("addr1").value);
-        let mask = ipToInt(document.getElementById("mask1").value);
+        let cidr = ipToInt(document.getElementById("cidr1").value);
+		let mask = (Math.pow(2, cidr) - 1) << (32 - cidr);
         let network = addr & mask;
 
         document.getElementById("result1").innerText =
@@ -86,23 +95,36 @@ function computeNetwork() {
     }
 }
 
+function computeNetwork2() {
+    try {
+        let addr = ipToInt(document.getElementById("addr2").value);
+        let mask = ipToInt(document.getElementById("mask2").value);
+        let network = addr & mask;
+
+        document.getElementById("result2").innerText =
+            "Adresse réseau: " + intToIp(network);
+    } catch (e) {
+        document.getElementById("result2").innerText = "Invalide.";
+    }
+}
+
 function checkMembership() {
     try {
-        let network = ipToInt(document.getElementById("net2").value);
-        let mask = ipToInt(document.getElementById("mask2").value);
-        let addr = ipToInt(document.getElementById("addr2").value);
+        let network = ipToInt(document.getElementById("net3").value);
+        let mask = ipToInt(document.getElementById("mask3").value);
+        let addr = ipToInt(document.getElementById("addr3").value);
 
         let computedNetwork = addr & mask;
 
         if (computedNetwork === (network & mask)) {
-            document.getElementById("result2").innerText =
+            document.getElementById("result3").innerText =
                 "Résultat: L'adresse est dans le réseau";
         } else {
-            document.getElementById("result2").innerText =
-                "Résultat: L'adresse n'est psa dans le réseau";
+            document.getElementById("result3").innerText =
+                "Résultat: L'adresse n'est pas dans le réseau";
         }
     } catch (e) {
-        document.getElementById("result2").innerText = "Invalide.";
+        document.getElementById("result3").innerText = "Invalide.";
     }
 }
 </script>
