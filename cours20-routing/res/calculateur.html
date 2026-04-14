@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Réseau - Outil de validation</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+        margin: 40px;
+    }
+    h2 {
+        margin-top: 40px;
+    }
+    .section {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+        max-width: 500px;
+    }
+    input {
+        display: block;
+        margin: 10px 0;
+        padding: 8px;
+        width: 100%;
+        font-size: 14px;
+    }
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .result {
+        margin-top: 15px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<h1>Outil de validation Réseau</h1>
+
+<div class="section">
+    <h2>1. Calcul adresse réseau</h2>
+    <input id="addr1" placeholder="Adresse (e.g. 192.168.1.10)">
+    <input id="mask1" placeholder="Netmask (e.g. 255.255.255.0)">
+    <button onclick="computeNetwork()">Calcul</button>
+    <div class="result" id="result1"></div>
+</div>
+
+<div class="section">
+    <h2>2. Adresse est dans le réseau?</h2>
+    <input id="net2" placeholder="Adresse réseau (e.g. 192.168.1.0)">
+    <input id="mask2" placeholder="Netmask (e.g. 255.255.255.0)">
+    <input id="addr2" placeholder="Adresse hôte (e.g. 192.168.1.50)">
+    <button onclick="checkMembership()">Calcul</button>
+    <div class="result" id="result2"></div>
+</div>
+
+<script>
+function ipToInt(ip) {
+    return ip.split('.').reduce((acc, octet) => (acc << 8) + parseInt(octet), 0) >>> 0;
+}
+
+function intToIp(int) {
+    return [
+        (int >>> 24) & 255,
+        (int >>> 16) & 255,
+        (int >>> 8) & 255,
+        int & 255
+    ].join('.');
+}
+
+function computeNetwork() {
+    try {
+        let addr = ipToInt(document.getElementById("addr1").value);
+        let mask = ipToInt(document.getElementById("mask1").value);
+        let network = addr & mask;
+
+        document.getElementById("result1").innerText =
+            "Adrese réseau: " + intToIp(network);
+    } catch (e) {
+        document.getElementById("result1").innerText = "Invalide.";
+    }
+}
+
+function checkMembership() {
+    try {
+        let network = ipToInt(document.getElementById("net2").value);
+        let mask = ipToInt(document.getElementById("mask2").value);
+        let addr = ipToInt(document.getElementById("addr2").value);
+
+        let computedNetwork = addr & mask;
+
+        if (computedNetwork === (network & mask)) {
+            document.getElementById("result2").innerText =
+                "Résultat: L'adresse est dans le réseau";
+        } else {
+            document.getElementById("result2").innerText =
+                "Résultat: L'adresse n'est psa dans le réseau";
+        }
+    } catch (e) {
+        document.getElementById("result2").innerText = "Invalide.";
+    }
+}
+</script>
+
+</body>
+</html>
