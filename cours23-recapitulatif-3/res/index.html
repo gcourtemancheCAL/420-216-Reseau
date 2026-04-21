@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Spatula City!</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+            letter-spacing: 2px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #ff9800, #ff5722);
+            color: white;
+        }
+
+        .hero h1 {
+            margin-bottom: 10px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .price {
+            font-size: 1.5em;
+            color: #e53935;
+            font-weight: bold;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #888;
+            margin-right: 10px;
+        }
+
+        .badge {
+            background: #e53935;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    🥄 SPATULA CITY 🥄
+</header>
+
+<section class="hero">
+    <h1>Les meilleures spatules du monde</h1>
+    <p>Spatula CITY!</p>
+</section>
+
+<section class="products">
+
+    <div class="card">
+        <img src="img/spatula1.webp" alt="Spatule classique">
+        <div class="card-content">
+            <h3>Spatule Classique</h3>
+            <p><span class="old-price">19.99$</span> <span class="price">4.99$</span></p>
+            <span class="badge">-75%</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/spatula4.webp" alt="Spatule silicone">
+        <div class="card-content">
+            <h3>Spatule Silicone Pro</h3>
+            <p><span class="old-price">24.99$</span> <span class="price">6.99$</span></p>
+            <span class="badge">MEGA DEAL</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/spatula3.webp" alt="Spatule métal">
+        <div class="card-content">
+            <h3>Spatule Métal Ultra</h3>
+            <p><span class="old-price">29.99$</span> <span class="price">9.99$</span></p>
+            <span class="badge">LIMITÉ</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/spatula2.jpg" alt="Spatule deluxe">
+        <div class="card-content">
+            <h3>Spatule Deluxe Chef</h3>
+            <p><span class="old-price">49.99$</span> <span class="price">14.99$</span></p>
+            <span class="badge">WOW 🔥</span>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Spatula City — SPATULA CITY !
+</footer>
+
+</body>
+</html>
