@@ -46,6 +46,7 @@ Le réseau "Subnet Personnel" doit être un sous-réseau du 192.168.48.0/20. Ce 
 - Configurez les routes nécessaires au bon fonctionnement du réseau
 	- Votre laptop va devoir pouvoir rejoindre votre serveur.
 	- Votre laptop va devoir avoir accès à internet.
+	- Le routeur R2-SRV dispose du 172.16.0.10 comme adresse dans le réseau LAN CLASSE
 
 ##### Windows
 
